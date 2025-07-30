@@ -391,7 +391,7 @@ Text to process:
                         "district": district.strip() if district else '',
                         "isLargeRetailer": is_large_retailer,
                         "specialMarket": shop.get('specialMarket') if shop.get('specialMarket') else None,
-                        "certificateType": shop.get('certificateType', certificate_type)
+                        "certificateType": shop.get('certificateType', certificate_type) or certificate_type or "中小小売店(全券種)"
                     }
                     cleaned_shops.append(cleaned_shop)
                     print(f"   ✅ Shop {i+1}: {cleaned_shop['name']}")
@@ -627,7 +627,7 @@ Text to process:
                             "district": shop.get('district'),
                             "isLargeRetailer": is_large_retailer,
                             "specialMarket": shop.get('specialMarket') if shop.get('specialMarket') else None,
-                            "certificateType": shop.get('certificateType', certificate_type)
+                            "certificateType": shop.get('certificateType', certificate_type) or certificate_type or "中小小売店(全券種)"
                         }
                         cleaned_shops.append(cleaned_shop)
                         print(f"   ✅ Shop {i+1}: {cleaned_shop['name']}")
@@ -712,8 +712,8 @@ Rules:
                         "latitude": 35.6762,
                         "longitude": 139.7649
                     }
-                    # Ensure certificate type is preserved
-                    if "certificateType" not in shop:
+                    # Ensure certificate type is preserved and never null
+                    if "certificateType" not in shop or shop["certificateType"] is None:
                         shop["certificateType"] = "中小小売店(全券種)"  # Default
                 result_shops.extend(batch)
                 
@@ -974,6 +974,11 @@ Rules:
         print(f"\n🗺️  Adding coordinates to {len(all_shops)} shops...")
         # Use geocoding service instead of AI for accurate coordinates
         all_shops = self.add_coordinates_with_geocoding(all_shops)
+        
+        # Final validation: ensure no null certificateType values
+        for shop in all_shops:
+            if not shop.get('certificateType'):
+                shop['certificateType'] = "中小小売店(全券種)"  # Default fallback
         
         # Save processed URLs to cache
         self.save_processed_urls(current_urls)
