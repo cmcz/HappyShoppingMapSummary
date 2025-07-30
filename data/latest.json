@@ -1,7 +1,7 @@
 {
-  "lastUpdated": "2025-07-30T03:43:50.022089+00:00",
+  "lastUpdated": "2025-07-30T04:01:12.465038+00:00",
   "dataVersion": "2.0",
-  "totalShops": 116,
+  "totalShops": 67,
   "processedPDFs": [
     "https://happy-kaimonoken.info/wp-content/uploads/2025/07/daiten_250724.pdf",
     "https://happy-kaimonoken.info/wp-content/uploads/2025/07/tempo_250728.pdf"
@@ -11,741 +11,6 @@
     "https://happy-kaimonoken.info/wp-content/uploads/2025/07/tempo_250728.pdf"
   ],
   "shops": [
-    {
-      "name": "俺のフレンチ東京",
-      "address": "銀座1-8-19 キラリトギンザ地下1F",
-      "phoneNumber": "03-6264-4921",
-      "businessCategory": "フレンチ",
-      "businessCategoryCode": 8,
-      "district": "銀座",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
-      }
-    },
-    {
-      "name": "俺のイタリアン東京",
-      "address": "銀座1-8-19 キラリトギンザ地下1F",
-      "phoneNumber": "03-5579-9915",
-      "businessCategory": "イタリアン",
-      "businessCategoryCode": 8,
-      "district": "銀座",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
-      }
-    },
-    {
-      "name": "ＯＷＮＤＡＹＳ マロニエゲート銀座１店",
-      "address": "銀座2-2-14 マロニエゲート銀座1-3階",
-      "phoneNumber": "0120-900-298",
-      "businessCategory": "眼鏡店",
-      "businessCategoryCode": 7,
-      "district": "銀座",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
-      }
-    },
-    {
-      "name": "ブラッスリーポール・ボキューズ銀座",
-      "address": "銀座2-2-14 マロニエゲート銀座1-10F",
-      "phoneNumber": "03-5159-0321",
-      "businessCategory": "フレンチ",
-      "businessCategoryCode": 8,
-      "district": "銀座",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
-      }
-    },
-    {
-      "name": "江戸前肉割烹 宮下",
-      "address": "銀座2-2-14 マロニエゲート銀座1-12F",
-      "phoneNumber": "03-3538-4129",
-      "businessCategory": "すき焼き",
-      "businessCategoryCode": 8,
-      "district": "銀座",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
-      }
-    },
-    {
-      "name": "ハンズ 銀座店",
-      "address": "銀座2-2-14",
-      "phoneNumber": "03-3538-0109",
-      "businessCategory": "雑貨等小売店",
-      "businessCategoryCode": 1,
-      "district": "銀座",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
-      }
-    },
-    {
-      "name": "ニトリEXPRESS銀座ロフト店",
-      "address": "銀座2-4-6 ベルビア館6階",
-      "phoneNumber": "070-1486-9411",
-      "businessCategory": "インテリア用品",
-      "businessCategoryCode": 7,
-      "district": "銀座",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
-      }
-    },
-    {
-      "name": "銀座伊東屋",
-      "address": "銀座2-7-15",
-      "phoneNumber": "03-3561-8311",
-      "businessCategory": "文房具店",
-      "businessCategoryCode": 7,
-      "district": "銀座",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
-      }
-    },
-    {
-      "name": "オーケー銀座店",
-      "address": "銀座3-2-1 マロニエゲート銀座2 B1－B2",
-      "phoneNumber": "03-3528-6531",
-      "businessCategory": "スーパーマーケット",
-      "businessCategoryCode": 3,
-      "district": "銀座",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
-      }
-    },
-    {
-      "name": "ジーユー マロニエゲート銀座店",
-      "address": "銀座3-2-1 マロニエゲート銀座2-5F",
-      "phoneNumber": "03-6228-7850",
-      "businessCategory": "アパレル",
-      "businessCategoryCode": 2,
-      "district": "銀座",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
-      }
-    },
-    {
-      "name": "日月火　ＺＯＥ銀座店",
-      "address": "銀座3-3-1 ZOE銀座6F",
-      "phoneNumber": "03-3538-7788",
-      "businessCategory": "飲食店",
-      "businessCategoryCode": 8,
-      "district": "銀座",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
-      }
-    },
-    {
-      "name": "無印良品 銀座",
-      "address": "銀座3-3-5",
-      "phoneNumber": "03-3538-1311",
-      "businessCategory": "小売業",
-      "businessCategoryCode": 7,
-      "district": "銀座",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
-      }
-    },
-    {
-      "name": "石臼挽き蕎麦 箱根暁庵銀座三越店",
-      "address": "銀座4-6-16 三越銀座店11階",
-      "phoneNumber": "03-6228-6918",
-      "businessCategory": "飲食店",
-      "businessCategoryCode": 8,
-      "district": "銀座",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
-      }
-    },
-    {
-      "name": "東急プラザ銀座",
-      "address": "銀座5-2-1",
-      "phoneNumber": "03-3571-2130",
-      "businessCategory": "ショッピングセンター",
-      "businessCategoryCode": 7,
-      "district": "銀座",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
-      }
-    },
-    {
-      "name": "鳥と手打ちそば とり数寄 銀座店",
-      "address": "銀座5-2-1 東急プラザ銀座11F D区画",
-      "phoneNumber": "03-6264-5266",
-      "businessCategory": "飲食店",
-      "businessCategoryCode": 8,
-      "district": "銀座",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
-      }
-    },
-    {
-      "name": "株式会社下鴨茶寮",
-      "address": "銀座5-2-1 東急プラザ銀座11F",
-      "phoneNumber": "070-5345-5761",
-      "businessCategory": "茶懐石・京料理",
-      "businessCategoryCode": 8,
-      "district": "銀座",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
-      }
-    },
-    {
-      "name": "ＥＸＩＴＭＥＬＳＡ（メルサ銀座五丁目店）",
-      "address": "銀座5-7-10",
-      "phoneNumber": "03-3573-5511",
-      "businessCategory": "ショッピングセンター",
-      "businessCategoryCode": 7,
-      "district": "銀座",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
-      }
-    },
-    {
-      "name": "ライオンギンザ５丁目店",
-      "address": "銀座5-8-1 GINZA PLACE B2F",
-      "phoneNumber": "03-3571-5371",
-      "businessCategory": "飲食店",
-      "businessCategoryCode": 8,
-      "district": "銀座",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
-      }
-    },
-    {
-      "name": "春水堂　銀座店",
-      "address": "銀座5-8-1 GINZA PLACE B1F",
-      "phoneNumber": "03-6263-8344",
-      "businessCategory": "台湾カフェ・飲食",
-      "businessCategoryCode": 8,
-      "district": "銀座",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
-      }
-    },
-    {
-      "name": "ユニクロ銀座店",
-      "address": "銀座6-9-5",
-      "phoneNumber": "03-6252-5181",
-      "businessCategory": "衣料品",
-      "businessCategoryCode": 2,
-      "district": "銀座",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
-      }
-    },
-    {
-      "name": "ドン・キホーテ銀座本館",
-      "address": "銀座8-10 銀座ナイン3号館",
-      "phoneNumber": "0570-023-811",
-      "businessCategory": "小売業",
-      "businessCategoryCode": 7,
-      "district": "銀座",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
-      }
-    },
-    {
-      "name": "トモズ コレド日本橋店",
-      "address": "日本橋1-4-1",
-      "phoneNumber": "03-6225-2861",
-      "businessCategory": "医療品、化粧品、雑貨等の販売",
-      "businessCategoryCode": 1,
-      "district": "日本橋",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6833,
-        "longitude": 139.7736
-      }
-    },
-    {
-      "name": "日本橋 西川",
-      "address": "日本橋1-4-1 コレド日本橋地下1階",
-      "phoneNumber": "03-3271-5531",
-      "businessCategory": "寝具小売業",
-      "businessCategoryCode": 7,
-      "district": "日本橋",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6833,
-        "longitude": 139.7736
-      }
-    },
-    {
-      "name": "ロティサリーバール ダパウロ コレド日本橋店",
-      "address": "日本橋1-4-1 コレド日本橋4F",
-      "phoneNumber": "03-6225-9770",
-      "businessCategory": "地中海料理",
-      "businessCategoryCode": 8,
-      "district": "日本橋",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6833,
-        "longitude": 139.7736
-      }
-    },
-    {
-      "name": "近江牛岡喜",
-      "address": "日本橋1-4-1",
-      "phoneNumber": "03-6262-1329",
-      "businessCategory": "肉料理",
-      "businessCategoryCode": 8,
-      "district": "日本橋",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6833,
-        "longitude": 139.7736
-      }
-    },
-    {
-      "name": "丸善 日本橋店",
-      "address": "日本橋2-3-10",
-      "phoneNumber": "03-6214-2001",
-      "businessCategory": "書店",
-      "businessCategoryCode": 7,
-      "district": "日本橋",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6833,
-        "longitude": 139.7736
-      }
-    },
-    {
-      "name": "ビックカメラ 日本橋三越",
-      "address": "日本橋室町1-4-1",
-      "phoneNumber": "03-5542-1111",
-      "businessCategory": "家電・携帯電話・パソコン販売",
-      "businessCategoryCode": 6,
-      "district": "日本橋",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6833,
-        "longitude": 139.7736
-      }
-    },
-    {
-      "name": "㈱ＪＴＢ 日本橋コレド室町店",
-      "address": "日本橋室町2-2-1 コレド室町1-B1階",
-      "phoneNumber": "03-6738-4122",
-      "businessCategory": "旅行",
-      "businessCategoryCode": 9,
-      "district": "日本橋",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6833,
-        "longitude": 139.7736
-      }
-    },
-    {
-      "name": "日本橋案内所",
-      "address": "日本橋室町2-2-1 コレド室町1-B1階",
-      "phoneNumber": "03-3242-0010",
-      "businessCategory": "観光案内所",
-      "businessCategoryCode": 9,
-      "district": "日本橋",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6833,
-        "longitude": 139.7736
-      }
-    },
-    {
-      "name": "タロー書房",
-      "address": "日本橋室町2-2-1 コレド室町1-B1階",
-      "phoneNumber": "03-3241-2701",
-      "businessCategory": "書籍",
-      "businessCategoryCode": 7,
-      "district": "日本橋",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6833,
-        "longitude": 139.7736
-      }
-    },
-    {
-      "name": "刃物の木屋",
-      "address": "日本橋室町2-2-1 コレド室町1-1階",
-      "phoneNumber": "03-3241-0110",
-      "businessCategory": "刃物",
-      "businessCategoryCode": 7,
-      "district": "日本橋",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6833,
-        "longitude": 139.7736
-      }
-    },
-    {
-      "name": "日本橋かに福コレド室町１",
-      "address": "日本橋室町2-2-1 コレド室町1-3階",
-      "phoneNumber": "03-6265-1577",
-      "businessCategory": "和食",
-      "businessCategoryCode": 8,
-      "district": "日本橋",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6833,
-        "longitude": 139.7736
-      }
-    },
-    {
-      "name": "ビストロ石川亭 ＣＯＲＥＤＯ室町店",
-      "address": "日本橋室町2-2-1 コレド室町1-3階",
-      "phoneNumber": "03-6225-2010",
-      "businessCategory": "洋食",
-      "businessCategoryCode": 8,
-      "district": "日本橋",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6833,
-        "longitude": 139.7736
-      }
-    },
-    {
-      "name": "蕎麦割烹 稲田 コレド室町店",
-      "address": "日本橋室町2-2-1 コレド室町1-3階",
-      "phoneNumber": "03-6262-1490",
-      "businessCategory": "蕎麦割烹",
-      "businessCategoryCode": 8,
-      "district": "日本橋",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6833,
-        "longitude": 139.7736
-      }
-    },
-    {
-      "name": "房家  日本橋店",
-      "address": "日本橋室町2-2-1 コレド室町1-3階",
-      "phoneNumber": "03-6225-2347",
-      "businessCategory": "焼肉店",
-      "businessCategoryCode": 8,
-      "district": "日本橋",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6833,
-        "longitude": 139.7736
-      }
-    },
-    {
-      "name": "ざくろ室町店",
-      "address": "日本橋室町2-2-1 コレド室町",
-      "phoneNumber": "03-3241-4841",
-      "businessCategory": "和食",
-      "businessCategoryCode": 8,
-      "district": "日本橋",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6833,
-        "longitude": 139.7736
-      }
-    },
-    {
-      "name": "日本橋玉ゐ コレド室町店",
-      "address": "日本橋室町2-3-1 コレド室町2-B1F",
-      "phoneNumber": "03-6262-3125",
-      "businessCategory": "和食",
-      "businessCategoryCode": 8,
-      "district": "日本橋",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6833,
-        "longitude": 139.7736
-      }
-    },
-    {
-      "name": "牡蠣場北海道厚岸 コレド室町店",
-      "address": "日本橋室町2-3-1 コレド室町2-1階",
-      "phoneNumber": "03-6262-3144",
-      "businessCategory": "飲食店",
-      "businessCategoryCode": 8,
-      "district": "日本橋",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6833,
-        "longitude": 139.7736
-      }
-    },
-    {
-      "name": "博多もつ鍋やまやコレド室町店",
-      "address": "日本橋室町2-3-1 コレド室町2-2F",
-      "phoneNumber": "03-5202-8080",
-      "businessCategory": "飲食業",
-      "businessCategoryCode": 8,
-      "district": "日本橋",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6833,
-        "longitude": 139.7736
-      }
-    },
-    {
-      "name": "株式会社にんべん",
-      "address": "日本橋室町2-3-1",
-      "phoneNumber": "03-3241-0241",
-      "businessCategory": "かつおぶし専門店",
-      "businessCategoryCode": 7,
-      "district": "日本橋",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6833,
-        "longitude": 139.7736
-      }
-    },
-    {
-      "name": "鶴屋吉信東京店",
-      "address": "日本橋室町1-5-5 コレド室町3-1階",
-      "phoneNumber": "03-3243-0551",
-      "businessCategory": "和菓子",
-      "businessCategoryCode": 7,
-      "district": "日本橋",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.6833,
-        "longitude": 139.7736
-      }
-    },
-    {
-      "name": "FEERIE AVEDA HARUMI",
-      "address": "晴海5-2-31ららテラスHARUMI FLAG 3F",
-      "phoneNumber": "03-6225-0593",
-      "businessCategory": "美容室",
-      "businessCategoryCode": 9,
-      "district": "晴海",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.655,
-        "longitude": 139.79
-      }
-    },
-    {
-      "name": "医療法人社団晴月会　晴海耳鼻咽喉科",
-      "address": "晴海5-2-31ららテラスHARUMI FLAG 3F",
-      "phoneNumber": "03-5548-3387",
-      "businessCategory": "耳鼻咽喉科",
-      "businessCategoryCode": 9,
-      "district": "晴海",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.655,
-        "longitude": 139.79
-      }
-    },
-    {
-      "name": "マツモトキヨシ ららテラスHARUMI FLAG店",
-      "address": "晴海5-2-31 1階 10200",
-      "phoneNumber": "03-3520-8765",
-      "businessCategory": "ドラッグストア",
-      "businessCategoryCode": 7,
-      "district": "晴海",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.655,
-        "longitude": 139.79
-      }
-    },
-    {
-      "name": "サミットストアららテラス HARUMI FLAG店",
-      "address": "晴海5-2-31",
-      "phoneNumber": "03-3533-3310",
-      "businessCategory": "スーパーマーケット",
-      "businessCategoryCode": 3,
-      "district": "晴海",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.655,
-        "longitude": 139.79
-      }
-    },
-    {
-      "name": "株式会社ヤマダデンキＬＡＢＩ東京八重洲",
-      "address": "八重洲1-5-22",
-      "phoneNumber": "03-3510-9098",
-      "businessCategory": "家電販売",
-      "businessCategoryCode": 6,
-      "district": "八重洲",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.68,
-        "longitude": 139.765
-      }
-    },
-    {
-      "name": "目利きの銀次　東京ミッドタウン八重洲店",
-      "address": "八重洲2-2-1 東京ミッドタウン八重洲3階",
-      "phoneNumber": "03-5299-5188",
-      "businessCategory": "居酒屋",
-      "businessCategoryCode": 8,
-      "district": "八重洲",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.68,
-        "longitude": 139.765
-      }
-    },
-    {
-      "name": "山内農場　東京ミッドタウン八重洲店",
-      "address": "八重洲2-2-1 東京ミッドタウン八重洲3階",
-      "phoneNumber": "03-5299-0188",
-      "businessCategory": "居酒屋",
-      "businessCategoryCode": 8,
-      "district": "八重洲",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.68,
-        "longitude": 139.765
-      }
-    },
-    {
-      "name": "FLOWS GRILL BAR 東京ミッドタウン八重洲店",
-      "address": "八重洲2-2-1 東京ミッドタウン八重洲3階",
-      "phoneNumber": "03-5299-5088",
-      "businessCategory": "カフェバー",
-      "businessCategoryCode": 8,
-      "district": "八重洲",
-      "isLargeRetailer": true,
-      "specialMarket": null,
-      "certificateType": "大規模小売店(青色券)",
-      "coordinate": {
-        "latitude": 35.68,
-        "longitude": 139.765
-      }
-    },
     {
       "name": "セブンイレブン中央区明石町店",
       "address": "明石町2-1",
@@ -772,8 +37,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.664,
-        "longitude": 139.772
+        "latitude": 35.66695,
+        "longitude": 139.77619
       }
     },
     {
@@ -787,8 +52,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.664,
-        "longitude": 139.776
+        "latitude": 35.669441,
+        "longitude": 139.763104
       }
     },
     {
@@ -817,8 +82,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.659,
-        "longitude": 139.778
+        "latitude": 35.669441,
+        "longitude": 139.763104
       }
     },
     {
@@ -832,8 +97,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.659,
-        "longitude": 139.778
+        "latitude": 35.669441,
+        "longitude": 139.763104
       }
     },
     {
@@ -877,8 +142,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.659,
-        "longitude": 139.778
+        "latitude": 35.656616,
+        "longitude": 139.776783
       }
     },
     {
@@ -892,8 +157,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.659,
-        "longitude": 139.778
+        "latitude": 35.66695,
+        "longitude": 139.77619
       }
     },
     {
@@ -907,8 +172,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.675,
-        "longitude": 139.77
+        "latitude": 35.669441,
+        "longitude": 139.763104
       }
     },
     {
@@ -952,8 +217,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
+        "latitude": 35.669441,
+        "longitude": 139.763104
       }
     },
     {
@@ -967,8 +232,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
+        "latitude": 35.669441,
+        "longitude": 139.763104
       }
     },
     {
@@ -982,8 +247,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
+        "latitude": 35.669441,
+        "longitude": 139.763104
       }
     },
     {
@@ -1087,8 +352,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
+        "latitude": 35.66695,
+        "longitude": 139.77619
       }
     },
     {
@@ -1102,8 +367,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
+        "latitude": 35.66695,
+        "longitude": 139.77619
       }
     },
     {
@@ -1117,8 +382,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
+        "latitude": 35.66695,
+        "longitude": 139.77619
       }
     },
     {
@@ -1132,8 +397,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
+        "latitude": 35.66695,
+        "longitude": 139.77619
       }
     },
     {
@@ -1147,8 +412,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
+        "latitude": 35.666142,
+        "longitude": 139.766359
       }
     },
     {
@@ -1162,8 +427,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
+        "latitude": 35.66695,
+        "longitude": 139.77619
       }
     },
     {
@@ -1177,8 +442,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
+        "latitude": 35.66695,
+        "longitude": 139.77619
       }
     },
     {
@@ -1192,8 +457,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.6719,
-        "longitude": 139.7658
+        "latitude": 35.66695,
+        "longitude": 139.77619
       }
     },
     {
@@ -1207,8 +472,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.68,
-        "longitude": 139.78
+        "latitude": 35.669441,
+        "longitude": 139.763104
       }
     },
     {
@@ -1222,8 +487,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.68,
-        "longitude": 139.78
+        "latitude": 35.669441,
+        "longitude": 139.763104
       }
     },
     {
@@ -1237,8 +502,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.68,
-        "longitude": 139.78
+        "latitude": 35.669441,
+        "longitude": 139.763104
       }
     },
     {
@@ -1252,8 +517,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.68,
-        "longitude": 139.78
+        "latitude": 35.669441,
+        "longitude": 139.763104
       }
     },
     {
@@ -1327,8 +592,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.68,
-        "longitude": 139.78
+        "latitude": 35.66695,
+        "longitude": 139.77619
       }
     },
     {
@@ -1352,13 +617,13 @@
       "phoneNumber": "03-3555-2524",
       "businessCategory": "コンビニエンスストア",
       "businessCategoryCode": 1,
-      "district": null,
+      "district": "日本橋",
       "isLargeRetailer": false,
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.664,
-        "longitude": 139.772
+        "latitude": 35.669441,
+        "longitude": 139.763104
       }
     },
     {
@@ -1367,13 +632,13 @@
       "phoneNumber": "03-3551-2721",
       "businessCategory": "コンビニエンスストア",
       "businessCategoryCode": 1,
-      "district": null,
+      "district": "日本橋",
       "isLargeRetailer": false,
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.664,
-        "longitude": 139.772
+        "latitude": 35.6833,
+        "longitude": 139.7736
       }
     },
     {
@@ -1387,8 +652,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.663,
-        "longitude": 139.785
+        "latitude": 35.669441,
+        "longitude": 139.763104
       }
     },
     {
@@ -1402,8 +667,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.663,
-        "longitude": 139.785
+        "latitude": 35.669441,
+        "longitude": 139.763104
       }
     },
     {
@@ -1477,8 +742,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.6654,
-        "longitude": 139.7707
+        "latitude": 35.669441,
+        "longitude": 139.763104
       }
     },
     {
@@ -1582,8 +847,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.6654,
-        "longitude": 139.7707
+        "latitude": 35.66695,
+        "longitude": 139.77619
       }
     },
     {
@@ -1657,8 +922,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.655,
-        "longitude": 139.765
+        "latitude": 35.653124,
+        "longitude": 139.771254
       }
     },
     {
@@ -1672,8 +937,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.6833,
-        "longitude": 139.7736
+        "latitude": 35.726223,
+        "longitude": 139.800373
       }
     },
     {
@@ -1687,8 +952,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.6833,
-        "longitude": 139.7736
+        "latitude": 35.728009,
+        "longitude": 139.799506
       }
     },
     {
@@ -1702,8 +967,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.6833,
-        "longitude": 139.7736
+        "latitude": 35.728009,
+        "longitude": 139.799506
       }
     },
     {
@@ -1717,8 +982,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.6833,
-        "longitude": 139.7736
+        "latitude": 35.728009,
+        "longitude": 139.799506
       }
     },
     {
@@ -1732,8 +997,8 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.6833,
-        "longitude": 139.7736
+        "latitude": 35.678797,
+        "longitude": 139.775016
       }
     },
     {
@@ -1747,16 +1012,16 @@
       "specialMarket": null,
       "certificateType": "中小小売店(全券種)",
       "coordinate": {
-        "latitude": 35.6833,
-        "longitude": 139.7736
+        "latitude": 35.684081,
+        "longitude": 139.785483
       }
     }
   ],
   "processingMetadata": {
     "model": "gemini-1.5-flash",
     "discoveryUrl": "https://happy-kaimonoken.info/tenposearch/",
-    "processingTime": "2025-07-30T03:43:50.022097+00:00",
-    "apiCallsUsed": 2,
+    "processingTime": "2025-07-30T04:01:12.465044+00:00",
+    "apiCallsUsed": 1,
     "coordinateMethod": "mapbox-geocoding"
   }
 }
