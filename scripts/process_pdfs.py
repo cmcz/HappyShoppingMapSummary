@@ -792,10 +792,16 @@ Rules:
         failed_geocodes = 0
         mapbox_token = os.getenv('MAPBOX_ACCESS_TOKEN')
         
+        # Debug: Check all environment variables related to Mapbox
+        print("🔍 Debugging Mapbox token access:")
+        print(f"   MAPBOX_ACCESS_TOKEN exists: {mapbox_token is not None}")
         if mapbox_token:
+            print(f"   Token length: {len(mapbox_token)} chars")
+            print(f"   Token starts with: {mapbox_token[:10]}...")
             print("🔑 Mapbox access token found - using real geocoding")
         else:
             print("⚠️  No Mapbox access token - using district-based fallbacks only")
+            print("   Make sure MAPBOX_ACCESS_TOKEN is set in GitHub repository secrets")
         
         for i, shop in enumerate(shops):
             address = shop.get('address') or ''

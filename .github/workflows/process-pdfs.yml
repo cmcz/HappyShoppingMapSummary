@@ -57,6 +57,7 @@ jobs:
       id: process
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        MAPBOX_ACCESS_TOKEN: ${{ secrets.MAPBOX_ACCESS_TOKEN }}
         FORCE_PROCESSING: ${{ github.event.inputs.force_processing || 'false' }}
       run: |
         # Debug secret access first

@@ -49,15 +49,24 @@ jobs:
       id: process
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        MAPBOX_ACCESS_TOKEN: ${{ secrets.MAPBOX_ACCESS_TOKEN }}
         FORCE_PROCESSING: ${{ github.event.inputs.force_processing || 'true' }}
       run: |
         # Debug secret access first
+        echo "🔍 Debugging secret access:"
         if [ -z "$GEMINI_API_KEY" ]; then
           echo "❌ GEMINI_API_KEY is not accessible in this workflow"
           echo "Please check repository secrets configuration"
           exit 1
         else
           echo "✅ GEMINI_API_KEY is accessible (${#GEMINI_API_KEY} chars)"
+        fi
+        
+        if [ -z "$MAPBOX_ACCESS_TOKEN" ]; then
+          echo "❌ MAPBOX_ACCESS_TOKEN is not accessible in this workflow"
+          echo "Please check repository secrets configuration"
+        else
+          echo "✅ MAPBOX_ACCESS_TOKEN is accessible (${#MAPBOX_ACCESS_TOKEN} chars)"
         fi
         
         cd scripts
