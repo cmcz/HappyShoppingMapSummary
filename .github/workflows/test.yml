@@ -91,14 +91,15 @@ jobs:
         # Add all files in data directory
         git add data/
         
-        # Check for any staged files (including new untracked files)
-        STAGED_FILES=$(git diff --cached --name-only)
-        if [ -z "$STAGED_FILES" ]; then
-          echo "changed=false" >> $GITHUB_OUTPUT
-          echo "📊 No changes detected in data files"
-        else
+        # Simple check: if we can make a commit, there are changes
+        # Use git status to check for staged files
+        if git status --porcelain --cached | grep -q .; then
           echo "changed=true" >> $GITHUB_OUTPUT
           echo "📊 Changes detected in data files"
+          
+          # Debug info
+          echo "📋 Staged files:"
+          git status --porcelain --cached
           
           # Show what changed
           echo "📋 Changes:"
@@ -122,6 +123,9 @@ jobs:
           
           echo "📤 Pushing changes to repository..."
           git push
+        else
+          echo "changed=false" >> $GITHUB_OUTPUT
+          echo "📊 No changes detected in data files"
         fi
         
     - name: Show results
