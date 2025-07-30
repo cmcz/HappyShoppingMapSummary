@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-07-30T02:28:17.907781+00:00",
+  "lastUpdated": "2025-07-30T03:43:50.022089+00:00",
   "dataVersion": "2.0",
   "totalShops": 116,
   "processedPDFs": [
@@ -106,7 +106,7 @@
       "address": "銀座2-4-6 ベルビア館6階",
       "phoneNumber": "070-1486-9411",
       "businessCategory": "インテリア用品",
-      "businessCategoryCode": 5,
+      "businessCategoryCode": 7,
       "district": "銀座",
       "isLargeRetailer": true,
       "specialMarket": null,
@@ -346,7 +346,7 @@
       "address": "日本橋1-4-1 コレド日本橋地下1階",
       "phoneNumber": "03-3271-5531",
       "businessCategory": "寝具小売業",
-      "businessCategoryCode": 5,
+      "businessCategoryCode": 7,
       "district": "日本橋",
       "isLargeRetailer": true,
       "specialMarket": null,
@@ -1755,8 +1755,8 @@
   "processingMetadata": {
     "model": "gemini-1.5-flash",
     "discoveryUrl": "https://happy-kaimonoken.info/tenposearch/",
-    "processingTime": "2025-07-30T02:28:17.907788+00:00",
+    "processingTime": "2025-07-30T03:43:50.022097+00:00",
     "apiCallsUsed": 2,
-    "coordinateMethod": "google-maps-geocoding"
+    "coordinateMethod": "mapbox-geocoding"
   }
 }
