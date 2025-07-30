@@ -94,8 +94,9 @@ jobs:
         # Add all files in data directory
         git add data/
         
-        # Check for changes
-        if git diff --cached --quiet; then
+        # Check for any staged files (including new untracked files)
+        STAGED_FILES=$(git diff --cached --name-only)
+        if [ -z "$STAGED_FILES" ]; then
           echo "changed=false" >> $GITHUB_OUTPUT
           echo "📊 No changes detected in data files"
         else
