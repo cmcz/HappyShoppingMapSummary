@@ -324,8 +324,9 @@ Text to process:
                     break
                     
                 except Exception as api_error:
-                    if "429" in str(api_error) or "quota" in str(api_error).lower():
-                        # Extract retry delay from error if available
+                    error_str = str(api_error).lower()
+                    if any(keyword in error_str for keyword in ["429", "quota", "overloaded", "503", "unavailable"]):
+                        # Handle rate limits, quotas, and server overload
                         retry_delay = base_delay * (2 ** attempt)  # Exponential backoff
                         
                         # Try to extract suggested delay from error message
@@ -335,15 +336,23 @@ Text to process:
                             suggested_delay = int(delay_match.group(1))
                             retry_delay = max(retry_delay, suggested_delay + 5)  # Add buffer
                         
+                        # For server overload, use longer delays
+                        if "overloaded" in error_str or "503" in error_str:
+                            retry_delay = max(retry_delay, 60)  # At least 1 minute for overload
+                        
                         if attempt < max_retries - 1:
-                            print(f"⚠️  Rate limit hit (attempt {attempt + 1}/{max_retries})")
+                            if "overloaded" in error_str:
+                                print(f"⚠️  Gemini server overloaded (attempt {attempt + 1}/{max_retries})")
+                            else:
+                                print(f"⚠️  Rate limit hit (attempt {attempt + 1}/{max_retries})")
                             print(f"⏳ Waiting {retry_delay} seconds before retry...")
                             time.sleep(retry_delay)
                         else:
-                            print(f"❌ Final rate limit failure after {max_retries} attempts")
+                            print(f"❌ Final failure after {max_retries} attempts: {api_error}")
                             return []
                     else:
-                        # Non-rate-limit error, don't retry
+                        # Non-retryable error
+                        print(f"❌ Non-retryable error: {api_error}")
                         raise api_error
             
             print(f"📥 Received response ({len(result_text)} chars)")
