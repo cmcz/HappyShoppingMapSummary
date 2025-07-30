@@ -19,8 +19,8 @@ import time
 class PDFProcessor:
     def __init__(self, api_key: str):
         genai.configure(api_key=api_key)
-        # Using gemini-1.5-flash for better rate limits (higher quota than 2.0-flash-exp)
-        self.model = genai.GenerativeModel('gemini-1.5-flash')
+        # Using gemini-2.5-flash - newer model that might be more efficient
+        self.model = genai.GenerativeModel('gemini-2.5-flash')
         
         # Track API usage to avoid rate limits
         self.api_calls_made = 0
@@ -263,7 +263,9 @@ class PDFProcessor:
             print(f"   Raw text: '{text[:100]}'")
         
         prompt = f"""
-Please extract shop information from this Japanese PDF text and return it as a JSON array. Each shop should have the following structure:
+IMPORTANT: Return ONLY a valid JSON array. Do not include any code, explanations, or markdown formatting.
+
+Extract shop information from this Japanese PDF text. Return a JSON array where each shop has this exact structure:
 
 {{
   "name": "店舗名",
@@ -289,18 +291,16 @@ Business category codes:
 - サービス業（他に分類されないもの）: 9
 - 大規模小売店: 10
 
-Districts in 中央区: {', '.join(self.districts)}
+Districts: {', '.join(self.districts)}
 
 Rules:
-1. Extract only actual shop names and data, ignore headers and category titles
-2. For address, include only the part after "中央区"
-3. Detect district from address if possible
-4. Phone numbers should be in format like "03-1234-5678"
-5. Return only valid JSON array, no other text
-6. If special market like "築地魚河岸" is mentioned, include it
+1. Extract only actual shop names, ignore headers/categories
+2. Address should exclude "中央区" 
+3. Detect district from address
+4. Return ONLY the JSON array, no other text or formatting
 
 Text to process:
-{text[:8000]}  # Limit text length for API
+{text[:6000]}
 """
 
         # Check API quota before making request
@@ -309,7 +309,7 @@ Text to process:
             return []
         
         try:
-            print(f"🔄 Sending request to Gemini... (call {self.api_calls_made + 1}/{self.max_daily_calls})")
+            print(f"🔄 Sending request to AI... (call {self.api_calls_made + 1}/{self.max_daily_calls})")
             
             # Implement exponential backoff for retries
             max_retries = 3
@@ -862,8 +862,17 @@ Rules:
                                 print(f"      ✅ Geocoded: {lat:.4f}, {lon:.4f}")
                             else:
                                 print(f"      ⚠️  Coordinates outside Tokyo area: {lat}, {lon}")
+                        elif data['status'] == 'REQUEST_DENIED':
+                            print(f"      ❌ Google Maps API Request Denied: {data.get('error_message', 'No error message')}")
+                            print(f"         This usually means:")
+                            print(f"         1. Geocoding API is not enabled for your API key")
+                            print(f"         2. API key has IP/domain restrictions blocking GitHub Actions")
+                            print(f"         3. API key is invalid or has no quota remaining")
+                            print(f"         4. Billing is not enabled (required for production use)")
                         else:
                             print(f"      ❌ No geocoding results: {data.get('status', 'unknown')}")
+                            if data.get('error_message'):
+                                print(f"         Error: {data['error_message']}")
                             
                 except Exception as e:
                     print(f"      ❌ Geocoding error: {e}")
@@ -978,7 +987,7 @@ Rules:
             "discoveredPDFs": current_urls,
             "shops": all_shops,
             "processingMetadata": {
-                "model": "gemini-1.5-flash",
+                "model": "gemini-2.5-flash",
                 "discoveryUrl": self.search_url,
                 "processingTime": datetime.now(timezone.utc).isoformat(),
                 "apiCallsUsed": self.api_calls_made,

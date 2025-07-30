@@ -118,7 +118,7 @@ jobs:
           git commit -m "🤖 Update shop data - $(date -u +"%Y-%m-%d %H:%M UTC")
 
           📊 Shop count: ${SHOPS_COUNT}
-          🤖 Model: gemini-1.5-flash
+          🤖 Model: gemini-2.5-flash
           🗺️  Coordinates: Google Maps geocoding
           🔍 Auto-discovered PDFs from happy-kaimonoken.info"
           
@@ -144,7 +144,7 @@ jobs:
           - **Updated**: ${{ steps.date.outputs.date }}
           - **Shops**: ${{ steps.process.outputs.shops_count || 'N/A' }} total
           - **PDFs Processed**: ${{ steps.process.outputs.pdfs_processed || 'N/A' }}
-          - **Model**: gemini-2.0-flash-exp
+          - **Model**: gemini-2.5-flash
           - **Discovery**: Auto-discovered from happy-kaimonoken.info
           
           ### 🔄 Changes Made
@@ -161,7 +161,7 @@ jobs:
           
           ### 🛠️ Technical Details
           - Python script with web scraping for PDF discovery
-          - Gemini 2.0 Flash for AI processing
+          - Gemini 2.5 Flash for AI processing
           - Automatic change detection and processing
           - Daily checks at 6:00 AM JST
         draft: false

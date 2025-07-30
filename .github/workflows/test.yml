@@ -115,7 +115,7 @@ jobs:
           git commit -m "🤖 Update shop data - $(date -u +"%Y-%m-%d %H:%M UTC")
 
           📊 Shop count: ${SHOPS_COUNT}
-          🤖 Model: gemini-1.5-flash
+          🤖 Model: gemini-2.5-flash
           🗺️  Coordinates: Google Maps geocoding
           🔍 Auto-discovered PDFs from happy-kaimonoken.info"
           
