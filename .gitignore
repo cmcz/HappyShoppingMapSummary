@@ -89,4 +89,4 @@ Temporary Items
 *.log
 
 # Backup files (keep data/ directory but ignore backup files)
-data/shops_*.json
+data/*.json
