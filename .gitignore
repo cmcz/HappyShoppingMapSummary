@@ -88,5 +88,4 @@ Temporary Items
 # Logs
 *.log
 
-# Backup files (keep data/ directory but ignore backup files)
-data/*.json
+
