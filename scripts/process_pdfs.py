@@ -19,8 +19,8 @@ import time
 class PDFProcessor:
     def __init__(self, api_key: str):
         genai.configure(api_key=api_key)
-        # Using gemini-1.5-flash for better rate limits (higher quota than 2.0-flash-exp)
-        self.model = genai.GenerativeModel('gemini-1.5-flash')
+        # Using gemini-2.5-flash - newer model that might be more efficient
+        self.model = genai.GenerativeModel('gemini-2.5-flash')
         
         # Track API usage to avoid rate limits
         self.api_calls_made = 0
@@ -300,7 +300,7 @@ Rules:
 6. If special market like "築地魚河岸" is mentioned, include it
 
 Text to process:
-{text[:8000]}  # Limit text length for API
+{text[:6000]}  # Reduce text length to use fewer tokens
 """
 
         # Check API quota before making request
@@ -309,7 +309,7 @@ Text to process:
             return []
         
         try:
-            print(f"🔄 Sending request to Gemini... (call {self.api_calls_made + 1}/{self.max_daily_calls})")
+            print(f"🔄 Sending request to AI... (call {self.api_calls_made + 1}/{self.max_daily_calls})")
             
             # Implement exponential backoff for retries
             max_retries = 3
@@ -978,7 +978,7 @@ Rules:
             "discoveredPDFs": current_urls,
             "shops": all_shops,
             "processingMetadata": {
-                "model": "gemini-1.5-flash",
+                "model": "gemini-2.5-flash",
                 "discoveryUrl": self.search_url,
                 "processingTime": datetime.now(timezone.utc).isoformat(),
                 "apiCallsUsed": self.api_calls_made,
