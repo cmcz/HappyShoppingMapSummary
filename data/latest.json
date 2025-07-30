@@ -1,7 +1,1762 @@
 {
-  "lastUpdated": "2025-01-28T10:00:00Z",
-  "dataVersion": "1.0",
-  "totalShops": 0,
-  "processedPDFs": [],
-  "shops": []
+  "lastUpdated": "2025-07-30T02:28:17.907781+00:00",
+  "dataVersion": "2.0",
+  "totalShops": 116,
+  "processedPDFs": [
+    "https://happy-kaimonoken.info/wp-content/uploads/2025/07/daiten_250724.pdf",
+    "https://happy-kaimonoken.info/wp-content/uploads/2025/07/tempo_250728.pdf"
+  ],
+  "discoveredPDFs": [
+    "https://happy-kaimonoken.info/wp-content/uploads/2025/07/daiten_250724.pdf",
+    "https://happy-kaimonoken.info/wp-content/uploads/2025/07/tempo_250728.pdf"
+  ],
+  "shops": [
+    {
+      "name": "俺のフレンチ東京",
+      "address": "銀座1-8-19 キラリトギンザ地下1F",
+      "phoneNumber": "03-6264-4921",
+      "businessCategory": "フレンチ",
+      "businessCategoryCode": 8,
+      "district": "銀座",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "俺のイタリアン東京",
+      "address": "銀座1-8-19 キラリトギンザ地下1F",
+      "phoneNumber": "03-5579-9915",
+      "businessCategory": "イタリアン",
+      "businessCategoryCode": 8,
+      "district": "銀座",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "ＯＷＮＤＡＹＳ マロニエゲート銀座１店",
+      "address": "銀座2-2-14 マロニエゲート銀座1-3階",
+      "phoneNumber": "0120-900-298",
+      "businessCategory": "眼鏡店",
+      "businessCategoryCode": 7,
+      "district": "銀座",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "ブラッスリーポール・ボキューズ銀座",
+      "address": "銀座2-2-14 マロニエゲート銀座1-10F",
+      "phoneNumber": "03-5159-0321",
+      "businessCategory": "フレンチ",
+      "businessCategoryCode": 8,
+      "district": "銀座",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "江戸前肉割烹 宮下",
+      "address": "銀座2-2-14 マロニエゲート銀座1-12F",
+      "phoneNumber": "03-3538-4129",
+      "businessCategory": "すき焼き",
+      "businessCategoryCode": 8,
+      "district": "銀座",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "ハンズ 銀座店",
+      "address": "銀座2-2-14",
+      "phoneNumber": "03-3538-0109",
+      "businessCategory": "雑貨等小売店",
+      "businessCategoryCode": 1,
+      "district": "銀座",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "ニトリEXPRESS銀座ロフト店",
+      "address": "銀座2-4-6 ベルビア館6階",
+      "phoneNumber": "070-1486-9411",
+      "businessCategory": "インテリア用品",
+      "businessCategoryCode": 5,
+      "district": "銀座",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "銀座伊東屋",
+      "address": "銀座2-7-15",
+      "phoneNumber": "03-3561-8311",
+      "businessCategory": "文房具店",
+      "businessCategoryCode": 7,
+      "district": "銀座",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "オーケー銀座店",
+      "address": "銀座3-2-1 マロニエゲート銀座2 B1－B2",
+      "phoneNumber": "03-3528-6531",
+      "businessCategory": "スーパーマーケット",
+      "businessCategoryCode": 3,
+      "district": "銀座",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "ジーユー マロニエゲート銀座店",
+      "address": "銀座3-2-1 マロニエゲート銀座2-5F",
+      "phoneNumber": "03-6228-7850",
+      "businessCategory": "アパレル",
+      "businessCategoryCode": 2,
+      "district": "銀座",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "日月火　ＺＯＥ銀座店",
+      "address": "銀座3-3-1 ZOE銀座6F",
+      "phoneNumber": "03-3538-7788",
+      "businessCategory": "飲食店",
+      "businessCategoryCode": 8,
+      "district": "銀座",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "無印良品 銀座",
+      "address": "銀座3-3-5",
+      "phoneNumber": "03-3538-1311",
+      "businessCategory": "小売業",
+      "businessCategoryCode": 7,
+      "district": "銀座",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "石臼挽き蕎麦 箱根暁庵銀座三越店",
+      "address": "銀座4-6-16 三越銀座店11階",
+      "phoneNumber": "03-6228-6918",
+      "businessCategory": "飲食店",
+      "businessCategoryCode": 8,
+      "district": "銀座",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "東急プラザ銀座",
+      "address": "銀座5-2-1",
+      "phoneNumber": "03-3571-2130",
+      "businessCategory": "ショッピングセンター",
+      "businessCategoryCode": 7,
+      "district": "銀座",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "鳥と手打ちそば とり数寄 銀座店",
+      "address": "銀座5-2-1 東急プラザ銀座11F D区画",
+      "phoneNumber": "03-6264-5266",
+      "businessCategory": "飲食店",
+      "businessCategoryCode": 8,
+      "district": "銀座",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "株式会社下鴨茶寮",
+      "address": "銀座5-2-1 東急プラザ銀座11F",
+      "phoneNumber": "070-5345-5761",
+      "businessCategory": "茶懐石・京料理",
+      "businessCategoryCode": 8,
+      "district": "銀座",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "ＥＸＩＴＭＥＬＳＡ（メルサ銀座五丁目店）",
+      "address": "銀座5-7-10",
+      "phoneNumber": "03-3573-5511",
+      "businessCategory": "ショッピングセンター",
+      "businessCategoryCode": 7,
+      "district": "銀座",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "ライオンギンザ５丁目店",
+      "address": "銀座5-8-1 GINZA PLACE B2F",
+      "phoneNumber": "03-3571-5371",
+      "businessCategory": "飲食店",
+      "businessCategoryCode": 8,
+      "district": "銀座",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "春水堂　銀座店",
+      "address": "銀座5-8-1 GINZA PLACE B1F",
+      "phoneNumber": "03-6263-8344",
+      "businessCategory": "台湾カフェ・飲食",
+      "businessCategoryCode": 8,
+      "district": "銀座",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "ユニクロ銀座店",
+      "address": "銀座6-9-5",
+      "phoneNumber": "03-6252-5181",
+      "businessCategory": "衣料品",
+      "businessCategoryCode": 2,
+      "district": "銀座",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "ドン・キホーテ銀座本館",
+      "address": "銀座8-10 銀座ナイン3号館",
+      "phoneNumber": "0570-023-811",
+      "businessCategory": "小売業",
+      "businessCategoryCode": 7,
+      "district": "銀座",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "トモズ コレド日本橋店",
+      "address": "日本橋1-4-1",
+      "phoneNumber": "03-6225-2861",
+      "businessCategory": "医療品、化粧品、雑貨等の販売",
+      "businessCategoryCode": 1,
+      "district": "日本橋",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6833,
+        "longitude": 139.7736
+      }
+    },
+    {
+      "name": "日本橋 西川",
+      "address": "日本橋1-4-1 コレド日本橋地下1階",
+      "phoneNumber": "03-3271-5531",
+      "businessCategory": "寝具小売業",
+      "businessCategoryCode": 5,
+      "district": "日本橋",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6833,
+        "longitude": 139.7736
+      }
+    },
+    {
+      "name": "ロティサリーバール ダパウロ コレド日本橋店",
+      "address": "日本橋1-4-1 コレド日本橋4F",
+      "phoneNumber": "03-6225-9770",
+      "businessCategory": "地中海料理",
+      "businessCategoryCode": 8,
+      "district": "日本橋",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6833,
+        "longitude": 139.7736
+      }
+    },
+    {
+      "name": "近江牛岡喜",
+      "address": "日本橋1-4-1",
+      "phoneNumber": "03-6262-1329",
+      "businessCategory": "肉料理",
+      "businessCategoryCode": 8,
+      "district": "日本橋",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6833,
+        "longitude": 139.7736
+      }
+    },
+    {
+      "name": "丸善 日本橋店",
+      "address": "日本橋2-3-10",
+      "phoneNumber": "03-6214-2001",
+      "businessCategory": "書店",
+      "businessCategoryCode": 7,
+      "district": "日本橋",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6833,
+        "longitude": 139.7736
+      }
+    },
+    {
+      "name": "ビックカメラ 日本橋三越",
+      "address": "日本橋室町1-4-1",
+      "phoneNumber": "03-5542-1111",
+      "businessCategory": "家電・携帯電話・パソコン販売",
+      "businessCategoryCode": 6,
+      "district": "日本橋",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6833,
+        "longitude": 139.7736
+      }
+    },
+    {
+      "name": "㈱ＪＴＢ 日本橋コレド室町店",
+      "address": "日本橋室町2-2-1 コレド室町1-B1階",
+      "phoneNumber": "03-6738-4122",
+      "businessCategory": "旅行",
+      "businessCategoryCode": 9,
+      "district": "日本橋",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6833,
+        "longitude": 139.7736
+      }
+    },
+    {
+      "name": "日本橋案内所",
+      "address": "日本橋室町2-2-1 コレド室町1-B1階",
+      "phoneNumber": "03-3242-0010",
+      "businessCategory": "観光案内所",
+      "businessCategoryCode": 9,
+      "district": "日本橋",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6833,
+        "longitude": 139.7736
+      }
+    },
+    {
+      "name": "タロー書房",
+      "address": "日本橋室町2-2-1 コレド室町1-B1階",
+      "phoneNumber": "03-3241-2701",
+      "businessCategory": "書籍",
+      "businessCategoryCode": 7,
+      "district": "日本橋",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6833,
+        "longitude": 139.7736
+      }
+    },
+    {
+      "name": "刃物の木屋",
+      "address": "日本橋室町2-2-1 コレド室町1-1階",
+      "phoneNumber": "03-3241-0110",
+      "businessCategory": "刃物",
+      "businessCategoryCode": 7,
+      "district": "日本橋",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6833,
+        "longitude": 139.7736
+      }
+    },
+    {
+      "name": "日本橋かに福コレド室町１",
+      "address": "日本橋室町2-2-1 コレド室町1-3階",
+      "phoneNumber": "03-6265-1577",
+      "businessCategory": "和食",
+      "businessCategoryCode": 8,
+      "district": "日本橋",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6833,
+        "longitude": 139.7736
+      }
+    },
+    {
+      "name": "ビストロ石川亭 ＣＯＲＥＤＯ室町店",
+      "address": "日本橋室町2-2-1 コレド室町1-3階",
+      "phoneNumber": "03-6225-2010",
+      "businessCategory": "洋食",
+      "businessCategoryCode": 8,
+      "district": "日本橋",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6833,
+        "longitude": 139.7736
+      }
+    },
+    {
+      "name": "蕎麦割烹 稲田 コレド室町店",
+      "address": "日本橋室町2-2-1 コレド室町1-3階",
+      "phoneNumber": "03-6262-1490",
+      "businessCategory": "蕎麦割烹",
+      "businessCategoryCode": 8,
+      "district": "日本橋",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6833,
+        "longitude": 139.7736
+      }
+    },
+    {
+      "name": "房家  日本橋店",
+      "address": "日本橋室町2-2-1 コレド室町1-3階",
+      "phoneNumber": "03-6225-2347",
+      "businessCategory": "焼肉店",
+      "businessCategoryCode": 8,
+      "district": "日本橋",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6833,
+        "longitude": 139.7736
+      }
+    },
+    {
+      "name": "ざくろ室町店",
+      "address": "日本橋室町2-2-1 コレド室町",
+      "phoneNumber": "03-3241-4841",
+      "businessCategory": "和食",
+      "businessCategoryCode": 8,
+      "district": "日本橋",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6833,
+        "longitude": 139.7736
+      }
+    },
+    {
+      "name": "日本橋玉ゐ コレド室町店",
+      "address": "日本橋室町2-3-1 コレド室町2-B1F",
+      "phoneNumber": "03-6262-3125",
+      "businessCategory": "和食",
+      "businessCategoryCode": 8,
+      "district": "日本橋",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6833,
+        "longitude": 139.7736
+      }
+    },
+    {
+      "name": "牡蠣場北海道厚岸 コレド室町店",
+      "address": "日本橋室町2-3-1 コレド室町2-1階",
+      "phoneNumber": "03-6262-3144",
+      "businessCategory": "飲食店",
+      "businessCategoryCode": 8,
+      "district": "日本橋",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6833,
+        "longitude": 139.7736
+      }
+    },
+    {
+      "name": "博多もつ鍋やまやコレド室町店",
+      "address": "日本橋室町2-3-1 コレド室町2-2F",
+      "phoneNumber": "03-5202-8080",
+      "businessCategory": "飲食業",
+      "businessCategoryCode": 8,
+      "district": "日本橋",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6833,
+        "longitude": 139.7736
+      }
+    },
+    {
+      "name": "株式会社にんべん",
+      "address": "日本橋室町2-3-1",
+      "phoneNumber": "03-3241-0241",
+      "businessCategory": "かつおぶし専門店",
+      "businessCategoryCode": 7,
+      "district": "日本橋",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6833,
+        "longitude": 139.7736
+      }
+    },
+    {
+      "name": "鶴屋吉信東京店",
+      "address": "日本橋室町1-5-5 コレド室町3-1階",
+      "phoneNumber": "03-3243-0551",
+      "businessCategory": "和菓子",
+      "businessCategoryCode": 7,
+      "district": "日本橋",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.6833,
+        "longitude": 139.7736
+      }
+    },
+    {
+      "name": "FEERIE AVEDA HARUMI",
+      "address": "晴海5-2-31ららテラスHARUMI FLAG 3F",
+      "phoneNumber": "03-6225-0593",
+      "businessCategory": "美容室",
+      "businessCategoryCode": 9,
+      "district": "晴海",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.655,
+        "longitude": 139.79
+      }
+    },
+    {
+      "name": "医療法人社団晴月会　晴海耳鼻咽喉科",
+      "address": "晴海5-2-31ららテラスHARUMI FLAG 3F",
+      "phoneNumber": "03-5548-3387",
+      "businessCategory": "耳鼻咽喉科",
+      "businessCategoryCode": 9,
+      "district": "晴海",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.655,
+        "longitude": 139.79
+      }
+    },
+    {
+      "name": "マツモトキヨシ ららテラスHARUMI FLAG店",
+      "address": "晴海5-2-31 1階 10200",
+      "phoneNumber": "03-3520-8765",
+      "businessCategory": "ドラッグストア",
+      "businessCategoryCode": 7,
+      "district": "晴海",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.655,
+        "longitude": 139.79
+      }
+    },
+    {
+      "name": "サミットストアららテラス HARUMI FLAG店",
+      "address": "晴海5-2-31",
+      "phoneNumber": "03-3533-3310",
+      "businessCategory": "スーパーマーケット",
+      "businessCategoryCode": 3,
+      "district": "晴海",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.655,
+        "longitude": 139.79
+      }
+    },
+    {
+      "name": "株式会社ヤマダデンキＬＡＢＩ東京八重洲",
+      "address": "八重洲1-5-22",
+      "phoneNumber": "03-3510-9098",
+      "businessCategory": "家電販売",
+      "businessCategoryCode": 6,
+      "district": "八重洲",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.68,
+        "longitude": 139.765
+      }
+    },
+    {
+      "name": "目利きの銀次　東京ミッドタウン八重洲店",
+      "address": "八重洲2-2-1 東京ミッドタウン八重洲3階",
+      "phoneNumber": "03-5299-5188",
+      "businessCategory": "居酒屋",
+      "businessCategoryCode": 8,
+      "district": "八重洲",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.68,
+        "longitude": 139.765
+      }
+    },
+    {
+      "name": "山内農場　東京ミッドタウン八重洲店",
+      "address": "八重洲2-2-1 東京ミッドタウン八重洲3階",
+      "phoneNumber": "03-5299-0188",
+      "businessCategory": "居酒屋",
+      "businessCategoryCode": 8,
+      "district": "八重洲",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.68,
+        "longitude": 139.765
+      }
+    },
+    {
+      "name": "FLOWS GRILL BAR 東京ミッドタウン八重洲店",
+      "address": "八重洲2-2-1 東京ミッドタウン八重洲3階",
+      "phoneNumber": "03-5299-5088",
+      "businessCategory": "カフェバー",
+      "businessCategoryCode": 8,
+      "district": "八重洲",
+      "isLargeRetailer": true,
+      "specialMarket": null,
+      "certificateType": "大規模小売店(青色券)",
+      "coordinate": {
+        "latitude": 35.68,
+        "longitude": 139.765
+      }
+    },
+    {
+      "name": "セブンイレブン中央区明石町店",
+      "address": "明石町2-1",
+      "phoneNumber": "03-3248-0478",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "明石町",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.664,
+        "longitude": 139.772
+      }
+    },
+    {
+      "name": "セブンイレブン聖路加タワー店",
+      "address": "明石町8-1 聖路加タワー1階",
+      "phoneNumber": "03-3547-7881",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "明石町",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.664,
+        "longitude": 139.772
+      }
+    },
+    {
+      "name": "ローソンＨ入船一丁目店",
+      "address": "入船1-3-1",
+      "phoneNumber": "03-3523-1150",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "入船",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.664,
+        "longitude": 139.776
+      }
+    },
+    {
+      "name": "セブンイレブン中央区入船３丁目店",
+      "address": "入船3-1-13",
+      "phoneNumber": "03-5541-4028",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "入船",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.664,
+        "longitude": 139.776
+      }
+    },
+    {
+      "name": "セブンイレブン勝どきグロウスタウン店",
+      "address": "勝どき1-3-3 アパートメンツタワー勝どき1F",
+      "phoneNumber": "03-6220-4557",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "勝どき",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.659,
+        "longitude": 139.778
+      }
+    },
+    {
+      "name": "セブンイレブン勝どき駅前店",
+      "address": "勝どき1-8-1-102",
+      "phoneNumber": "03-6219-7710",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "勝どき",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.659,
+        "longitude": 139.778
+      }
+    },
+    {
+      "name": "ローソン勝どき二丁目店",
+      "address": "勝どき2-15-1",
+      "phoneNumber": "03-3532-3963",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "勝どき",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.659,
+        "longitude": 139.778
+      }
+    },
+    {
+      "name": "ファミリーマート勝どき三丁目",
+      "address": "勝どき3-2-3  1階",
+      "phoneNumber": "03-5547-2010",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "勝どき",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.659,
+        "longitude": 139.778
+      }
+    },
+    {
+      "name": "ローソンパークタワー勝どきミッド",
+      "address": "勝どき4丁目6番2号",
+      "phoneNumber": "03-3534-9220",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "勝どき",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.659,
+        "longitude": 139.778
+      }
+    },
+    {
+      "name": "セブンイレブン勝どき５丁目店",
+      "address": "勝どき5-3-2",
+      "phoneNumber": "03-5548-0077",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "勝どき",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.659,
+        "longitude": 139.778
+      }
+    },
+    {
+      "name": "ナチュラルローソン京橋一丁目",
+      "address": "京橋1-10-7",
+      "phoneNumber": "03-3566-8777",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "京橋",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.675,
+        "longitude": 139.77
+      }
+    },
+    {
+      "name": "ローソンＳ清水建設新社屋店",
+      "address": "京橋2-16-1",
+      "phoneNumber": "03-5524-5105",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "京橋",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.675,
+        "longitude": 139.77
+      }
+    },
+    {
+      "name": "ナチュラルローソン東京スクエアガーデン３階店",
+      "address": "京橋3-1-1-3",
+      "phoneNumber": "03-5204-2045",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "京橋",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.675,
+        "longitude": 139.77
+      }
+    },
+    {
+      "name": "セブンイレブン銀座1丁目中央店",
+      "address": "銀座1-10-6",
+      "phoneNumber": "03-3562-5077",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "銀座",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "ナチュラルローソン中央銀座一丁目店",
+      "address": "銀座1-13-15",
+      "phoneNumber": "03-3564-5220",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "銀座",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "セブンイレブン銀座１丁目店",
+      "address": "銀座1-26-1",
+      "phoneNumber": "03-3563-3910",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "銀座",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "セブンイレブン銀座２丁目店",
+      "address": "銀座2-15-2",
+      "phoneNumber": "03-3248-1712",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "銀座",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "ナチュラルローソン銀座二丁目店",
+      "address": "銀座2-16-12",
+      "phoneNumber": "03-5550-3177",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "銀座",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "ローソンＨ銀座三丁目店",
+      "address": "銀座3-8-1",
+      "phoneNumber": "03-3563-3731",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "銀座",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "セブンイレブン銀座３丁目店",
+      "address": "銀座3-15-10",
+      "phoneNumber": "03-3546-1711",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "銀座",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "ローソン銀座四丁目昭和通店",
+      "address": "銀座4-11-2",
+      "phoneNumber": "03-3541-4720",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "銀座",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "セブンイレブン歌舞伎座店",
+      "address": "銀座4-12-15",
+      "phoneNumber": "03-3547-7500",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "銀座",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "セブンイレブン銀座地下街店",
+      "address": "銀座5-4-3 対鶴館ビル地下2階",
+      "phoneNumber": "03-3571-7772",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "銀座",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "セブンイレブン銀座6丁目中央店",
+      "address": "銀座6-13-16 ヒューリック銀座ウォールビル",
+      "phoneNumber": "03-3541-0711",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "銀座",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "セブンイレブン銀座７丁目店",
+      "address": "銀座7-2-18 GRANBELL SQUERE1階",
+      "phoneNumber": "03-3573-5527",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "銀座",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "ナチュラルローソン銀座並木通店",
+      "address": "銀座7-5-10",
+      "phoneNumber": "03-3572-0061",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "銀座",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "セブン－イレブン銀座7丁目中央店",
+      "address": "銀座7丁目12-9",
+      "phoneNumber": "03-5565-8686",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "銀座",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "セブンイレブン銀座７丁目東店",
+      "address": "銀座7-15-5",
+      "phoneNumber": "03-3546-1577",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "銀座",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "ローソン銀座八丁目店",
+      "address": "銀座8-4-9",
+      "phoneNumber": "03-3572-5701",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "銀座",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "ナチュラルローソン銀座三井ビル店",
+      "address": "銀座8-13-1",
+      "phoneNumber": "03-3543-8889",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "銀座",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6719,
+        "longitude": 139.7658
+      }
+    },
+    {
+      "name": "ファミリーマート茅場町駅東店",
+      "address": "新川1-2-8 山京ビル",
+      "phoneNumber": "03-3523-5384",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "新川",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.68,
+        "longitude": 139.78
+      }
+    },
+    {
+      "name": "セブンイレブン新川１丁目中央店",
+      "address": "新川1-3-10 旭ビルディング",
+      "phoneNumber": "03-3552-7603",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "新川",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.68,
+        "longitude": 139.78
+      }
+    },
+    {
+      "name": "セブンイレブン中央区新川１丁目店",
+      "address": "新川1-21-5 茅場町タワービル1階",
+      "phoneNumber": "03-3555-5868",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "新川",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.68,
+        "longitude": 139.78
+      }
+    },
+    {
+      "name": "ナチュラルローソン新川一丁目店",
+      "address": "新川1-24-1",
+      "phoneNumber": "03-3523-5430",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "新川",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.68,
+        "longitude": 139.78
+      }
+    },
+    {
+      "name": "ファミリーマート新川２丁目店",
+      "address": "新川2-6-2",
+      "phoneNumber": "03-5540-7088",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "新川",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.68,
+        "longitude": 139.78
+      }
+    },
+    {
+      "name": "セブンイレブン中央区新川２丁目店",
+      "address": "新川2-12-8",
+      "phoneNumber": "03-3551-1977",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "新川",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.68,
+        "longitude": 139.78
+      }
+    },
+    {
+      "name": "ローソンＨ新川二丁目店",
+      "address": "新川2-16-10",
+      "phoneNumber": "03-3523-6721",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "新川",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.68,
+        "longitude": 139.78
+      }
+    },
+    {
+      "name": "ナチュラルローソン新川二丁目店",
+      "address": "新川2-22-1 いちご新川ビル",
+      "phoneNumber": "03-6222-7744",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "新川",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.68,
+        "longitude": 139.78
+      }
+    },
+    {
+      "name": "セブンイレブン東京住友ツインビル西館店",
+      "address": "新川2-27-2 東京住友ツインビル西館1F",
+      "phoneNumber": "03-5541-7558",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "新川",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.68,
+        "longitude": 139.78
+      }
+    },
+    {
+      "name": "ファミリーマート新川中央大橋店",
+      "address": "新川2-28-1",
+      "phoneNumber": "03-3523-9019",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "新川",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.68,
+        "longitude": 139.78
+      }
+    },
+    {
+      "name": "ローソン新富一丁目店",
+      "address": "新富1-7-17",
+      "phoneNumber": "03-3555-2524",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": null,
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.664,
+        "longitude": 139.772
+      }
+    },
+    {
+      "name": "セブンイレブン中央区役所前店",
+      "address": "新富2-2-8 松竹衣裳ビル1階",
+      "phoneNumber": "03-3551-2721",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": null,
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.664,
+        "longitude": 139.772
+      }
+    },
+    {
+      "name": "セブンイレブン中央区月島１丁目店",
+      "address": "月島1-2-13",
+      "phoneNumber": "03-3532-1332",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "月島",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.663,
+        "longitude": 139.785
+      }
+    },
+    {
+      "name": "セブンイレブン月島駅前店",
+      "address": "月島1-5-2",
+      "phoneNumber": "03-3533-1050",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "月島",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.663,
+        "longitude": 139.785
+      }
+    },
+    {
+      "name": "ローソン月島駅前店",
+      "address": "月島2-1-2",
+      "phoneNumber": "03-3536-3157",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "月島",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.663,
+        "longitude": 139.785
+      }
+    },
+    {
+      "name": "ファミリーマート月島３丁目店",
+      "address": "月島3-31-1",
+      "phoneNumber": "03-3533-8750",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "月島",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.663,
+        "longitude": 139.785
+      }
+    },
+    {
+      "name": "ローソンＨ月島四丁目店",
+      "address": "月島4-4-1",
+      "phoneNumber": "03-3534-1739",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "月島",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.663,
+        "longitude": 139.785
+      }
+    },
+    {
+      "name": "ローソンＨ月島勝どき店",
+      "address": "月島4-16-1",
+      "phoneNumber": "03-3533-7203",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "月島",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.663,
+        "longitude": 139.785
+      }
+    },
+    {
+      "name": "ローソン新富町メトロピア店",
+      "address": "築地1-1-1",
+      "phoneNumber": "03-3524-3855",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "築地",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6654,
+        "longitude": 139.7707
+      }
+    },
+    {
+      "name": "セブンイレブン中央区築地２丁目店",
+      "address": "築地2-7-12 山京ビル1F",
+      "phoneNumber": "03-5565-8717",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "築地",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6654,
+        "longitude": 139.7707
+      }
+    },
+    {
+      "name": "ローソン築地二丁目店",
+      "address": "築地2-15-13",
+      "phoneNumber": "03-5565-0828",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "築地",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6654,
+        "longitude": 139.7707
+      }
+    },
+    {
+      "name": "ローソンＨ築地三丁目店",
+      "address": "築地3-1-10",
+      "phoneNumber": "03-3248-6866",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "築地",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6654,
+        "longitude": 139.7707
+      }
+    },
+    {
+      "name": "セブンイレブン築地日刊スポーツ本社店",
+      "address": "築地3-5-10",
+      "phoneNumber": "03-3547-7517",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "築地",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6654,
+        "longitude": 139.7707
+      }
+    },
+    {
+      "name": "ファミリーマート築地本願寺前店",
+      "address": "築地3-11-8",
+      "phoneNumber": "03-3541-0070",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "築地",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6654,
+        "longitude": 139.7707
+      }
+    },
+    {
+      "name": "ローソン築地四丁目店",
+      "address": "築地4-8-1",
+      "phoneNumber": "03-3546-3963",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "築地",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6654,
+        "longitude": 139.7707
+      }
+    },
+    {
+      "name": "セブンイレブン築地７丁目店",
+      "address": "築地7-8-10",
+      "phoneNumber": "03-3546-7177",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "築地",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6654,
+        "longitude": 139.7707
+      }
+    },
+    {
+      "name": "ナチュラルローソン佃二丁目店",
+      "address": "佃2-1-3",
+      "phoneNumber": "03-3532-7637",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "佃",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.66,
+        "longitude": 139.782
+      }
+    },
+    {
+      "name": "ローソン佃二丁目店",
+      "address": "佃2-2-7",
+      "phoneNumber": "03-3531-6821",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "佃",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.66,
+        "longitude": 139.782
+      }
+    },
+    {
+      "name": "セブンイレブン中央区佃２丁目店",
+      "address": "佃2-10-9",
+      "phoneNumber": "03-3533-0921",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "佃",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.66,
+        "longitude": 139.782
+      }
+    },
+    {
+      "name": "ファミリーマート佃二丁目店",
+      "address": "佃2-12-12 ハーモニーコート1階",
+      "phoneNumber": "03-3533-3892",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "佃",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.66,
+        "longitude": 139.782
+      }
+    },
+    {
+      "name": "ファミリーマート豊海町店",
+      "address": "豊海町5-1 豊海センタービル1階",
+      "phoneNumber": "03-5547-5235",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "豊海町",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.655,
+        "longitude": 139.765
+      }
+    },
+    {
+      "name": "ローソン東京日本橋店",
+      "address": "日本橋1-2-19",
+      "phoneNumber": "03-3231-0223",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "日本橋",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6833,
+        "longitude": 139.7736
+      }
+    },
+    {
+      "name": "ナチュラルローソン日本橋二丁目店",
+      "address": "日本橋2-1-21",
+      "phoneNumber": "03-5201-5515",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "日本橋",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6833,
+        "longitude": 139.7736
+      }
+    },
+    {
+      "name": "ファミリーマート八重洲さくら通り店",
+      "address": "日本橋2-3-18",
+      "phoneNumber": "03-3548-8300",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "日本橋",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6833,
+        "longitude": 139.7736
+      }
+    },
+    {
+      "name": "セブンイレブン日本橋２丁目店",
+      "address": "日本橋2-3-21",
+      "phoneNumber": "03-5201-5518",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "日本橋",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6833,
+        "longitude": 139.7736
+      }
+    },
+    {
+      "name": "ローソン日本橋三丁目店",
+      "address": "日本橋3-5-11",
+      "phoneNumber": "03-3275-2250",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "日本橋",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6833,
+        "longitude": 139.7736
+      }
+    },
+    {
+      "name": "ローソン日本橋蛎殻町一丁目店",
+      "address": "日本橋蛎殻町1-11-5",
+      "phoneNumber": "03-5695-5665",
+      "businessCategory": "コンビニエンスストア",
+      "businessCategoryCode": 1,
+      "district": "日本橋",
+      "isLargeRetailer": false,
+      "specialMarket": null,
+      "certificateType": "中小小売店(全券種)",
+      "coordinate": {
+        "latitude": 35.6833,
+        "longitude": 139.7736
+      }
+    }
+  ],
+  "processingMetadata": {
+    "model": "gemini-1.5-flash",
+    "discoveryUrl": "https://happy-kaimonoken.info/tenposearch/",
+    "processingTime": "2025-07-30T02:28:17.907788+00:00",
+    "apiCallsUsed": 2,
+    "coordinateMethod": "google-maps-geocoding"
+  }
 }
