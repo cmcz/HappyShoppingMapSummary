@@ -49,7 +49,7 @@ jobs:
       id: process
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        MAPBOX_ACCESS_TOKEN: ${{ secrets.MAPBOX_ACCESS_TOKEN }}
+        GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
         FORCE_PROCESSING: ${{ github.event.inputs.force_processing || 'true' }}
       run: |
         # Debug secret access first
@@ -62,11 +62,11 @@ jobs:
           echo "✅ GEMINI_API_KEY is accessible (${#GEMINI_API_KEY} chars)"
         fi
         
-        if [ -z "$MAPBOX_ACCESS_TOKEN" ]; then
-          echo "❌ MAPBOX_ACCESS_TOKEN is not accessible in this workflow"
+        if [ -z "$GOOGLE_MAPS_API_KEY" ]; then
+          echo "❌ GOOGLE_MAPS_API_KEY is not accessible in this workflow"
           echo "Please check repository secrets configuration"
         else
-          echo "✅ MAPBOX_ACCESS_TOKEN is accessible (${#MAPBOX_ACCESS_TOKEN} chars)"
+          echo "✅ GOOGLE_MAPS_API_KEY is accessible (${#GOOGLE_MAPS_API_KEY} chars)"
         fi
         
         cd scripts
@@ -116,7 +116,7 @@ jobs:
 
           📊 Shop count: ${SHOPS_COUNT}
           🤖 Model: gemini-1.5-flash
-          🗺️  Coordinates: Mapbox geocoding
+          🗺️  Coordinates: Google Maps geocoding
           🔍 Auto-discovered PDFs from happy-kaimonoken.info"
           
           echo "📤 Pushing changes to repository..."

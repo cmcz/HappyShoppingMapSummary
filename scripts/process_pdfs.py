@@ -774,8 +774,8 @@ Rules:
         return shops
     
     def add_coordinates_with_geocoding(self, shops: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        """Add coordinates using Mapbox Geocoding API (excellent for Japanese addresses)"""
-        print("Adding coordinates using Mapbox Geocoding API...")
+        """Add coordinates using Google Maps Geocoding API (excellent for Japanese addresses)"""
+        print("Adding coordinates using Google Maps Geocoding API...")
         
         # District coordinates as fallback
         district_coords = {
@@ -799,18 +799,18 @@ Rules:
         
         successful_geocodes = 0
         failed_geocodes = 0
-        mapbox_token = os.getenv('MAPBOX_ACCESS_TOKEN')
+        google_api_key = os.getenv('GOOGLE_MAPS_API_KEY')
         
-        # Debug: Check all environment variables related to Mapbox
-        print("🔍 Debugging Mapbox token access:")
-        print(f"   MAPBOX_ACCESS_TOKEN exists: {mapbox_token is not None}")
-        if mapbox_token:
-            print(f"   Token length: {len(mapbox_token)} chars")
-            print(f"   Token starts with: {mapbox_token[:10]}...")
-            print("🔑 Mapbox access token found - using real geocoding")
+        # Debug: Check all environment variables related to Google Maps
+        print("🔍 Debugging Google Maps API key access:")
+        print(f"   GOOGLE_MAPS_API_KEY exists: {google_api_key is not None}")
+        if google_api_key:
+            print(f"   API key length: {len(google_api_key)} chars")
+            print(f"   API key starts with: {google_api_key[:10]}...")
+            print("🔑 Google Maps API key found - using real geocoding")
         else:
-            print("⚠️  No Mapbox access token - using district-based fallbacks only")
-            print("   Make sure MAPBOX_ACCESS_TOKEN is set in GitHub repository secrets")
+            print("⚠️  No Google Maps API key - using district-based fallbacks only")
+            print("   Make sure GOOGLE_MAPS_API_KEY is set in GitHub repository secrets")
         
         for i, shop in enumerate(shops):
             address = shop.get('address') or ''
@@ -825,15 +825,15 @@ Rules:
             full_address = f"{address}, 中央区, 東京都, 日本" if address else f"{district}, 中央区, 東京都, 日本"
             
             # Only show progress every 10 shops when using fallbacks
-            if mapbox_token or (i + 1) % 10 == 0 or i == 0 or i == len(shops) - 1:
+            if google_api_key or (i + 1) % 10 == 0 or i == 0 or i == len(shops) - 1:
                 print(f"   🔍 {i+1}/{len(shops)}: {name}")
-                if mapbox_token:
+                if google_api_key:
                     print(f"      Address: {full_address}")
             
-            # Try geocoding with Mapbox API (requires access token)
+            # Try geocoding with Google Maps API (requires API key)
             coord = None
             
-            if mapbox_token:
+            if google_api_key:
                 try:
                     import urllib.parse
                     import urllib.request
@@ -842,33 +842,28 @@ Rules:
                     # Encode the address for URL
                     encoded_address = urllib.parse.quote(full_address)
                     
-                    # Mapbox Geocoding API endpoint
-                    # Using permanent geocoding endpoint (mapbox.places-permanent-v1)
-                    url = f"https://api.mapbox.com/geocoding/v5/mapbox.places/{encoded_address}.json?access_token={mapbox_token}&country=jp&limit=1"
+                    # Google Maps Geocoding API endpoint
+                    url = f"https://maps.googleapis.com/maps/api/geocode/json?address={encoded_address}&key={google_api_key}"
                     
                     # Make request with timeout
                     with urllib.request.urlopen(url, timeout=10) as response:
                         data = json.loads(response.read().decode())
                         
-                        if data.get('features') and len(data['features']) > 0:
-                            feature = data['features'][0]
-                            coordinates = feature['geometry']['coordinates']
-                            # Mapbox returns [longitude, latitude]
-                            lon = float(coordinates[0])
-                            lat = float(coordinates[1])
+                        if data['status'] == 'OK' and data['results']:
+                            result = data['results'][0]
+                            location = result['geometry']['location']
+                            lat = float(location['lat'])
+                            lon = float(location['lng'])
                             
                             # Validate coordinates are in Tokyo area
                             if 35.6 <= lat <= 35.8 and 139.6 <= lon <= 139.9:
                                 coord = {"latitude": lat, "longitude": lon}
                                 successful_geocodes += 1
-                                
-                                # Show confidence score if available
-                                confidence = feature.get('relevance', 'unknown')
-                                print(f"      ✅ Geocoded: {lat:.4f}, {lon:.4f} (confidence: {confidence})")
+                                print(f"      ✅ Geocoded: {lat:.4f}, {lon:.4f}")
                             else:
                                 print(f"      ⚠️  Coordinates outside Tokyo area: {lat}, {lon}")
                         else:
-                            print(f"      ❌ No geocoding results from Mapbox")
+                            print(f"      ❌ No geocoding results: {data.get('status', 'unknown')}")
                             
                 except Exception as e:
                     print(f"      ❌ Geocoding error: {e}")
@@ -881,25 +876,25 @@ Rules:
             if coord is None:
                 if district in district_coords:
                     coord = district_coords[district].copy()
-                    if mapbox_token:  # Only log if we tried real geocoding
+                    if google_api_key:  # Only log if we tried real geocoding
                         print(f"      📍 Using district default: {district}")
                 else:
                     # Try partial matching
                     for known_district, known_coord in district_coords.items():
                         if known_district in district or district in known_district:
                             coord = known_coord.copy()
-                            if mapbox_token:
+                            if google_api_key:
                                 print(f"      📍 Using matched district: {known_district}")
                             break
                     else:
                         coord = default_coord.copy()
-                        if mapbox_token:
+                        if google_api_key:
                             print(f"      📍 Using central default")
             
             shop["coordinate"] = coord
             
-            # Rate limiting for Mapbox API (600 requests per minute = 10 per second)
-            if i < len(shops) - 1 and mapbox_token:  # Don't sleep after last request or if no API key
+            # Rate limiting for Google Maps API (50 requests per second, but be conservative)
+            if i < len(shops) - 1 and google_api_key:  # Don't sleep after last request or if no API key
                 time.sleep(0.1)  # 10 requests per second to be safe
         
         print(f"\n📊 Geocoding results:")
@@ -987,7 +982,7 @@ Rules:
                 "discoveryUrl": self.search_url,
                 "processingTime": datetime.now(timezone.utc).isoformat(),
                 "apiCallsUsed": self.api_calls_made,
-                "coordinateMethod": "mapbox-geocoding"
+                "coordinateMethod": "google-maps-geocoding"
             }
         }
         
