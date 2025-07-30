@@ -274,9 +274,7 @@ Extract shop information from this Japanese PDF text. Return a JSON array where 
   "businessCategory": "業種カテゴリ",
   "businessCategoryCode": 数字コード,
   "district": "地区名",
-  "isLargeRetailer": {str(is_large_retailer).lower()},
-  "specialMarket": "特別市場名（築地魚河岸など、あれば）",
-  "certificateType": "{certificate_type}"
+  "isLargeRetailer": {str(is_large_retailer).lower()}
 }}
 
 Business category codes:
@@ -389,9 +387,7 @@ Text to process:
                         "businessCategory": shop.get('businessCategory', 'その他の小売業'),
                         "businessCategoryCode": shop.get('businessCategoryCode', 7),
                         "district": district.strip() if district else '',
-                        "isLargeRetailer": is_large_retailer,
-                        "specialMarket": shop.get('specialMarket') if shop.get('specialMarket') else None,
-                        "certificateType": shop.get('certificateType', certificate_type) or certificate_type or "中小小売店(全券種)"
+                        "isLargeRetailer": is_large_retailer
                     }
                     cleaned_shops.append(cleaned_shop)
                     print(f"   ✅ Shop {i+1}: {cleaned_shop['name']}")
@@ -625,9 +621,7 @@ Text to process:
                             "businessCategory": shop.get('businessCategory', 'その他の小売業'),
                             "businessCategoryCode": shop.get('businessCategoryCode', 7),
                             "district": shop.get('district'),
-                            "isLargeRetailer": is_large_retailer,
-                            "specialMarket": shop.get('specialMarket') if shop.get('specialMarket') else None,
-                            "certificateType": shop.get('certificateType', certificate_type) or certificate_type or "中小小売店(全券種)"
+                            "isLargeRetailer": is_large_retailer
                         }
                         cleaned_shops.append(cleaned_shop)
                         print(f"   ✅ Shop {i+1}: {cleaned_shop['name']}")
@@ -712,9 +706,7 @@ Rules:
                         "latitude": 35.6762,
                         "longitude": 139.7649
                     }
-                    # Ensure certificate type is preserved and never null
-                    if "certificateType" not in shop or shop["certificateType"] is None:
-                        shop["certificateType"] = "中小小売店(全券種)"  # Default
+# Certificate type field removed - no longer needed
                 result_shops.extend(batch)
                 
                 # Still add delay even on error to avoid further rate limit issues
@@ -975,10 +967,7 @@ Rules:
         # Use geocoding service instead of AI for accurate coordinates
         all_shops = self.add_coordinates_with_geocoding(all_shops)
         
-        # Final validation: ensure no null certificateType values
-        for shop in all_shops:
-            if not shop.get('certificateType'):
-                shop['certificateType'] = "中小小売店(全券種)"  # Default fallback
+# No validation needed for removed fields
         
         # Save processed URLs to cache
         self.save_processed_urls(current_urls)
