@@ -167,7 +167,7 @@ class PDFProcessor:
             os.makedirs(os.path.dirname(cache_file), exist_ok=True)
             cache_data = {
                 'urls': urls,
-                'lastProcessed': datetime.now(timezone.utc).isoformat(),
+                'lastProcessed': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%S+00:00'),
                 'count': len(urls)
             }
             with open(cache_file, 'w', encoding='utf-8') as f:
@@ -978,9 +978,13 @@ Rules:
         # Save processed URLs to cache
         self.save_processed_urls(current_urls)
         
-        # Create final output
+        # Create final output with iOS-compatible date format
+        now_utc = datetime.now(timezone.utc)
+        # Format without microseconds to avoid parsing issues
+        formatted_date = now_utc.strftime('%Y-%m-%dT%H:%M:%S+00:00')
+        
         output = {
-            "lastUpdated": datetime.now(timezone.utc).isoformat(),
+            "lastUpdated": formatted_date,
             "dataVersion": "2.0",  # Upgraded version with dynamic URL discovery
             "totalShops": len(all_shops),
             "processedPDFs": processed_urls,
@@ -989,7 +993,7 @@ Rules:
             "processingMetadata": {
                 "model": "gemini-2.5-flash",
                 "discoveryUrl": self.search_url,
-                "processingTime": datetime.now(timezone.utc).isoformat(),
+                "processingTime": formatted_date,
                 "apiCallsUsed": self.api_calls_made,
                 "coordinateMethod": "google-maps-geocoding"
             }
