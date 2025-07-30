@@ -107,7 +107,7 @@ jobs:
 
           📊 Shop count: ${SHOPS_COUNT}
           🤖 Model: gemini-1.5-flash
-          🗺️  Coordinates: Google Maps geocoding
+          🗺️  Coordinates: Mapbox geocoding
           🔍 Auto-discovered PDFs from happy-kaimonoken.info"
           
           echo "📤 Pushing changes to repository..."
