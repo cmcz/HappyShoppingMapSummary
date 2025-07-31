@@ -87,38 +87,26 @@ jobs:
     - name: Check and commit data files
       id: check_changes
       run: |
-        # Configure git first
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action Bot"
-        
-        # Add all files in data directory
-        git add data/
-        
-        # Simple check: if we can make a commit, there are changes
-        # Use git status to check for staged files
-        if git status --porcelain --cached | grep -q .; then
+        # Check if latest.json was created (indicates processing happened)
+        if [ -f "data/latest.json" ]; then
           echo "changed=true" >> $GITHUB_OUTPUT
-          echo "📊 Changes detected in data files"
+          echo "📊 Data files updated, committing changes"
+          
+          # Configure git
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action Bot"
+          
+          # Add data files
+          git add data/
           
           # Debug info
-          echo "📋 Staged files:"
-          git status --porcelain --cached
-          echo "📁 Files in data directory:"
-          ls -la data/
-          
-          # Show what changed
-          echo "📋 Changes:"
-          git diff --cached --stat || true
-          git diff --cached --name-only
-          
-          # Debug: Show files in data directory
           echo "📁 Files in data directory:"
           ls -la data/
           
           # Get shop count for commit message
           SHOPS_COUNT=$(cat data/latest.json | python -c "import sys, json; print(json.load(sys.stdin)['totalShops'])" 2>/dev/null || echo "unknown")
           
-          # Commit the changes immediately
+          # Commit and push the changes
           git commit -m "🤖 Update shop data - $(date -u +"%Y-%m-%d %H:%M UTC")
 
           📊 Shop count: ${SHOPS_COUNT}
@@ -130,7 +118,7 @@ jobs:
           git push
         else
           echo "changed=false" >> $GITHUB_OUTPUT
-          echo "📊 No changes detected in data files"
+          echo "📊 No processing needed - PDF URLs haven't changed"
         fi
         
     - name: Get current date
