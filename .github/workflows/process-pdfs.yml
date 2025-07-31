@@ -5,7 +5,7 @@ on:
     # Run daily at 6:00 AM JST (21:00 UTC previous day)
     - cron: '0 21 * * *'  
   workflow_dispatch:
-    # Allow manual triggering
+    # Allow manual triggering for testing
     inputs:
       force_processing:
         description: 'Force processing even if URLs haven't changed'
@@ -13,9 +13,8 @@ on:
         default: 'false'
         type: boolean
   push:
-    paths:
-      - 'scripts/process_pdfs.py'
-      - '.github/workflows/process-pdfs.yml'
+    branches: [ main ]
+    # Trigger on any push to main for testing and updates
 
 jobs:
   discover-and-process:
