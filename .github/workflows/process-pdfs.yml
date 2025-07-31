@@ -1,4 +1,4 @@
-name: Process Happy Shopping PDFs
+name: Process Happy Shopping PDFs - Fixed
 
 on:
   schedule:
@@ -88,6 +88,7 @@ jobs:
       id: check_changes
       run: |
         # Check if latest.json was created (indicates processing happened)
+        # This approach avoids problematic git status --cached commands
         if [ -f "data/latest.json" ]; then
           echo "changed=true" >> $GITHUB_OUTPUT
           echo "📊 Data files updated, committing changes"
