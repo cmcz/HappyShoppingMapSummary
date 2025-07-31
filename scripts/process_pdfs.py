@@ -262,6 +262,81 @@ class PDFProcessor:
             print(f"⚠️  Text too short ({len(text)} chars), might indicate extraction issues")
             print(f"   Raw text: '{text[:100]}'")
         
+        # Process in chunks if text is very long to handle multi-page PDFs
+        max_chunk_size = 15000
+        all_shops = []
+        
+        if len(text) <= max_chunk_size:
+            # Single chunk processing
+            all_shops = self._process_text_chunk(text, is_large_retailer, max_chunk_size)
+        else:
+            # Multi-chunk processing for long PDFs
+            print(f"📄 Long PDF detected ({len(text)} chars), processing in chunks...")
+            
+            # Split text into chunks at logical boundaries (paragraphs/line breaks)
+            chunks = []
+            current_chunk = ""
+            
+            # Split by double newlines first (paragraph boundaries)  
+            paragraphs = text.split('\n\n')
+            
+            for paragraph in paragraphs:
+                if len(current_chunk) + len(paragraph) + 2 <= max_chunk_size:
+                    current_chunk += paragraph + '\n\n'
+                else:
+                    if current_chunk.strip():
+                        chunks.append(current_chunk.strip())
+                        current_chunk = paragraph + '\n\n'
+                    else:
+                        # Single paragraph is too long, split by lines
+                        lines = paragraph.split('\n')
+                        for line in lines:
+                            if len(current_chunk) + len(line) + 1 <= max_chunk_size:
+                                current_chunk += line + '\n'
+                            else:
+                                if current_chunk.strip():
+                                    chunks.append(current_chunk.strip())
+                                current_chunk = line + '\n'
+            
+            # Add the last chunk
+            if current_chunk.strip():
+                chunks.append(current_chunk.strip())
+            
+            print(f"📄 Split into {len(chunks)} chunks")
+            
+            # Process each chunk
+            for i, chunk in enumerate(chunks):
+                print(f"🔄 Processing chunk {i+1}/{len(chunks)} ({len(chunk)} chars)")
+                chunk_shops = self._process_text_chunk(chunk, is_large_retailer, max_chunk_size)
+                all_shops.extend(chunk_shops)
+                
+                # Add delay between chunks to avoid rate limits
+                if i < len(chunks) - 1:
+                    print("⏳ Waiting 2 seconds before next chunk...")
+                    time.sleep(2)
+        
+        # Remove duplicates based on name and address
+        unique_shops = []
+        seen_shops = set()
+        
+        for shop in all_shops:
+            shop_key = (shop.get('name', '').strip().lower(), shop.get('address', '').strip().lower())
+            if shop_key not in seen_shops and shop.get('name', '').strip():
+                seen_shops.add(shop_key)
+                unique_shops.append(shop)
+        
+        if len(all_shops) != len(unique_shops):
+            print(f"🧹 Removed {len(all_shops) - len(unique_shops)} duplicate entries")
+        
+        print(f"✅ Total extracted: {len(unique_shops)} unique shops")
+        return unique_shops
+    
+    def _process_text_chunk(self, text: str, is_large_retailer: bool, max_chars: int) -> List[Dict[str, Any]]:
+        """Process a single chunk of text with Gemini AI"""
+        
+        # Ensure we don't exceed the character limit
+        text_to_process = text[:max_chars] if len(text) > max_chars else text
+        
         prompt = f"""
 IMPORTANT: Return ONLY a valid JSON array. Do not include any code, explanations, or markdown formatting.
 
@@ -298,7 +373,7 @@ Rules:
 4. Return ONLY the JSON array, no other text or formatting
 
 Text to process:
-{text[:6000]}
+{text_to_process}
 """
 
         # Check API quota before making request
@@ -387,255 +462,61 @@ Text to process:
                         "businessCategory": shop.get('businessCategory', 'その他の小売業'),
                         "businessCategoryCode": shop.get('businessCategoryCode', 7),
                         "district": district.strip() if district else '',
-                        "isLargeRetailer": is_large_retailer
+                        "isLargeRetailer": shop.get('isLargeRetailer', False)
                     }
                     cleaned_shops.append(cleaned_shop)
                     print(f"   ✅ Shop {i+1}: {cleaned_shop['name']}")
                 else:
                     print(f"   ❌ Skipped invalid entry {i+1}: {shop}")
             
-            print(f"🎉 Final result: {len(cleaned_shops)} valid shops extracted")
+            print(f"🎉 Chunk result: {len(cleaned_shops)} valid shops extracted")
             return cleaned_shops
             
         except json.JSONDecodeError as e:
             print(f"❌ JSON parsing error: {e}")
-            print(f"   Error at line {e.lineno}, column {e.colno}")
-            print(f"   Raw response length: {len(result_text)} chars")
+            # Use the same error recovery logic as the original method
+            return self._recover_from_json_error(result_text, e)
+        except Exception as e:
+            print(f"❌ Error processing chunk with Gemini: {e}")
+            return []
+
+    def _recover_from_json_error(self, result_text: str, json_error: json.JSONDecodeError) -> List[Dict[str, Any]]:
+        """Recover from JSON parsing errors using various strategies"""
+        print(f"   Error at line {json_error.lineno}, column {json_error.colno}")
+        print(f"   Raw response length: {len(result_text)} chars")
+        
+        # Show context around the error
+        if hasattr(json_error, 'pos'):
+            start = max(0, json_error.pos - 100)
+            end = min(len(result_text), json_error.pos + 100)
+            error_context = result_text[start:end]
+            print(f"   Error context: ...{error_context}...")
+        
+        # Simplified recovery - try to find complete JSON objects
+        try:
+            print("🔧 Attempting JSON recovery...")
+            import re
             
-            # Show context around the error
-            if hasattr(e, 'pos'):
-                start = max(0, e.pos - 100)
-                end = min(len(result_text), e.pos + 100)
-                error_context = result_text[start:end]
-                print(f"   Error context: ...{error_context}...")
+            # Look for complete objects with name field
+            pattern = r'\{\s*"name"\s*:\s*"[^"]+"\s*,(?:[^{}]|{[^{}]*})*\}'
+            matches = re.findall(pattern, result_text, re.MULTILINE)
             
-            # Try multiple fix strategies
-            print("🔧 Attempting to fix JSON...")
-            
-            fixed_shops = []
-            
-            # Strategy 1: Find and fix truncated JSON at specific patterns
-            strategies = [
-                # Look for incomplete object at the end - be more specific
-                (r',\s*$', ']'),  # Trailing comma
-                (r',\s*\{\s*"[^"]*"\s*:\s*"[^"]*"?\s*[^}]*$', ']', 'Remove incomplete trailing object'),
-                (r'\{\s*"[^"]*"\s*:\s*"[^"]*"?\s*[^}]*$', ']', 'Remove incomplete final object'),
-                (r'"[^"]*$', '"]', 'Complete incomplete string'),
-                (r':\s*"[^"]*$', ': ""}]', 'Complete incomplete property value')
-            ]
-            
-            for strategy_idx, strategy in enumerate(strategies):
+            recovered_shops = []
+            for match in matches:
                 try:
-                    import re
-                    
-                    if len(strategy) == 3:
-                        pattern, replacement, description = strategy
-                        print(f"   🔧 Strategy {strategy_idx + 1}: {description}")
-                    else:
-                        pattern, replacement = strategy
-                        print(f"   🔧 Strategy {strategy_idx + 1}: Pattern fix")
-                    
-                    # Apply the fix
-                    fixed_text = re.sub(pattern, replacement, result_text, flags=re.MULTILINE | re.DOTALL)
-                    
-                    if fixed_text != result_text:
-                        print(f"      Applied fix, testing...")
-                        shops = json.loads(fixed_text)
-                        print(f"      ✅ Strategy {strategy_idx + 1} worked! Parsed {len(shops)} entries")
-                        fixed_shops = shops
-                        break
-                    else:
-                        print(f"      No changes made with this pattern")
-                        
-                except Exception as strategy_error:
-                    print(f"      ❌ Strategy {strategy_idx + 1} failed: {strategy_error}")
+                    shop = json.loads(match)
+                    if shop.get('name'):
+                        recovered_shops.append(shop)
+                except:
                     continue
             
-            # Strategy 2: Smart truncation - find the last complete object
-            if not fixed_shops:
-                try:
-                    print("   🔧 Trying smart truncation...")
-                    
-                    # Look for the last complete object by finding closing braces
-                    # We need to be more careful about JSON structure
-                    
-                    # Count braces to find balanced objects
-                    brace_count = 0
-                    last_complete_pos = -1
-                    
-                    # Start from the beginning and track balanced braces
-                    for i, char in enumerate(result_text):
-                        if char == '{':
-                            brace_count += 1
-                        elif char == '}':
-                            brace_count -= 1
-                            # If we're back to 0 braces after seeing an object, this might be a complete object
-                            if brace_count == 0:
-                                # Look ahead to see if there's a comma or array end
-                                next_chars = result_text[i+1:i+10].strip()
-                                if next_chars.startswith(',') or next_chars.startswith(']') or i == len(result_text) - 1:
-                                    last_complete_pos = i
-                    
-                    if last_complete_pos > 0:
-                        # Truncate at the last complete object and add closing bracket
-                        truncated_text = result_text[:last_complete_pos + 1]
-                        
-                        # Check if we need to add array closing
-                        if not truncated_text.rstrip().endswith(']'):
-                            # Count how many objects we have by looking for complete objects
-                            if ',' in truncated_text:
-                                fixed_json = truncated_text + '\n]'
-                            else:
-                                # Single object, wrap in array
-                                fixed_json = '[' + truncated_text + ']'
-                        else:
-                            fixed_json = truncated_text
-                            
-                        print(f"      Trying smart truncation at position {last_complete_pos}")
-                        shops = json.loads(fixed_json)
-                        print(f"      ✅ Smart truncation worked! Parsed {len(shops)} entries")
-                        fixed_shops = shops
-                        
-                except Exception as smart_error:
-                    print(f"      ❌ Smart truncation failed: {smart_error}")
-                    
-                    # Fallback to simple pattern matching
-                    try:
-                        print("      🔧 Trying simple pattern truncation...")
-                        
-                        # Find the last complete object ending with simple patterns
-                        patterns_to_try = [
-                            '  }\n]',  # Complete array end
-                            '  }',     # Object end with indent
-                            '}',       # Simple object end
-                            '  },',    # Object end with comma and indent  
-                            '},',      # Object end with comma
-                        ]
-                        
-                        for pattern in patterns_to_try:
-                            last_complete = result_text.rfind(pattern)
-                            if last_complete > 0:
-                                # Calculate proper end position
-                                if pattern.endswith(']'):
-                                    # Already has array end
-                                    fixed_json = result_text[:last_complete + len(pattern)]
-                                else:
-                                    # Add array end
-                                    end_pos = last_complete + len(pattern.rstrip(','))
-                                    fixed_json = result_text[:end_pos] + '\n]'
-                                
-                                print(f"         Trying pattern '{pattern}' at pos {last_complete}")
-                                shops = json.loads(fixed_json)
-                                print(f"         ✅ Pattern truncation worked! Parsed {len(shops)} entries")
-                                fixed_shops = shops
-                                break
-                                
-                    except Exception as pattern_error:
-                        print(f"         ❌ Pattern truncation failed: {pattern_error}")
-            
-            # Strategy 3: Extract individual JSON objects
-            if not fixed_shops:
-                try:
-                    print("   🔧 Trying individual object extraction...")
-                    import re
-                    
-                    # Multiple patterns to catch different object formats
-                    patterns = [
-                        # Standard complete objects
-                        r'\{\s*"name"\s*:\s*"[^"]+"\s*,(?:[^{}]|{[^{}]*})*\}',
-                        # Objects that might span multiple lines
-                        r'\{\s*"name"\s*:\s*"[^"]+"\s*,[\s\S]*?\n\s*\}',
-                        # More lenient pattern for incomplete objects we can fix
-                        r'\{\s*"name"\s*:\s*"[^"]+"\s*,[\s\S]*?(?=\s*\{|\s*\]|\s*$)'
-                    ]
-                    
-                    extracted_shops = []
-                    
-                    for pattern_idx, pattern in enumerate(patterns):
-                        matches = re.findall(pattern, result_text, re.MULTILINE)
-                        print(f"      Pattern {pattern_idx + 1}: Found {len(matches)} potential objects")
-                        
-                        for match_idx, match in enumerate(matches):
-                            try:
-                                # Clean up the match
-                                clean_match = match.strip()
-                                
-                                # Ensure it ends with }
-                                if not clean_match.endswith('}'):
-                                    # Try to find where it should end
-                                    if '"certificateType"' in clean_match:
-                                        # Find the end of certificateType and add closing
-                                        cert_end = clean_match.rfind('"')
-                                        if cert_end > 0:
-                                            clean_match = clean_match[:cert_end + 1] + '\n  }'
-                                    else:
-                                        clean_match += '\n  }'
-                                
-                                # Try to parse
-                                shop = json.loads(clean_match)
-                                if shop.get('name'):  # Ensure it has a name
-                                    extracted_shops.append(shop)
-                                    print(f"         ✅ Object {match_idx + 1}: {shop['name']}")
-                                    
-                            except json.JSONDecodeError as parse_error:
-                                print(f"         ❌ Object {match_idx + 1} parse failed: {parse_error}")
-                                # Try to fix common issues
-                                try:
-                                    # Remove trailing commas
-                                    fixed_match = re.sub(r',(\s*[}\]])', r'\1', clean_match)
-                                    shop = json.loads(fixed_match)
-                                    if shop.get('name'):
-                                        extracted_shops.append(shop)
-                                        print(f"         🔧 Fixed Object {match_idx + 1}: {shop['name']}")
-                                except:
-                                    continue
-                            except Exception as other_error:
-                                print(f"         ❌ Object {match_idx + 1} failed: {other_error}")
-                                continue
-                    
-                    # Remove duplicates based on name
-                    if extracted_shops:
-                        seen_names = set()
-                        unique_shops = []
-                        for shop in extracted_shops:
-                            name = shop.get('name', '')
-                            if name and name not in seen_names:
-                                seen_names.add(name)
-                                unique_shops.append(shop)
-                        
-                        print(f"      ✅ Extracted {len(unique_shops)} unique objects")
-                        fixed_shops = unique_shops
-                        
-                except Exception as extract_error:
-                    print(f"      ❌ Individual extraction failed: {extract_error}")
-            
-            # If we got some shops, validate them
-            if fixed_shops:
-                cleaned_shops = []
-                for i, shop in enumerate(fixed_shops):
-                    if isinstance(shop, dict) and shop.get('name'):
-                        cleaned_shop = {
-                            "name": shop.get('name', '').strip(),
-                            "address": shop.get('address', '').strip(),
-                            "phoneNumber": shop.get('phoneNumber') if shop.get('phoneNumber') else None,
-                            "businessCategory": shop.get('businessCategory', 'その他の小売業'),
-                            "businessCategoryCode": shop.get('businessCategoryCode', 7),
-                            "district": shop.get('district'),
-                            "isLargeRetailer": is_large_retailer
-                        }
-                        cleaned_shops.append(cleaned_shop)
-                        print(f"   ✅ Shop {i+1}: {cleaned_shop['name']}")
-                
-                print(f"🎉 Recovered: {len(cleaned_shops)} valid shops")
-                return cleaned_shops
-            else:
-                print("   ❌ All fix strategies failed")
-                return []
-        except Exception as e:
-            print(f"❌ Error processing with Gemini: {e}")
-            import traceback
-            traceback.print_exc()
-            return []
+            if recovered_shops:
+                print(f"🔧 Recovered {len(recovered_shops)} shops from broken JSON")
+                return recovered_shops
+        except Exception as recovery_error:
+            print(f"❌ Recovery failed: {recovery_error}")
+        
+        return []
 
     def add_coordinates_with_gemini(self, shops: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """Add coordinate estimates using Gemini AI's knowledge of Tokyo addresses"""
