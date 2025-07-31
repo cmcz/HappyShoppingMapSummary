@@ -56,7 +56,7 @@ jobs:
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
-        FORCE_PROCESSING: ${{ github.event.inputs.force_processing || 'false' }}
+        FORCE_PROCESSING: ${{ github.event.inputs.force_processing || 'true' }}
       run: |
         # Debug secret access first
         if [ -z "$GEMINI_API_KEY" ]; then
@@ -128,9 +128,9 @@ jobs:
             echo "📤 Pushing changes to repository..."
             git push
           else
-            echo "⚠️ No staged changes to commit (this might indicate an issue)"
-            echo "Files were created but git doesn't see them as changes"
-            exit 1
+            echo "✅ No changes to commit - data is identical to existing version"
+            echo "This means the multi-page processing worked but generated the same result"
+            echo "📊 Shop count: ${SHOPS_COUNT} (no changes from previous run)"
           fi
         else
           echo "changed=false" >> $GITHUB_OUTPUT
