@@ -95,8 +95,18 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
           
+          # Debug git status before adding
+          echo "📋 Git status before adding:"
+          git status --porcelain
+          
           # Add data files
           git add data/
+          
+          # Debug git status after adding
+          echo "📋 Git status after adding:"
+          git status --porcelain
+          echo "📋 Staged files:"
+          git diff --cached --name-only
           
           # Debug info
           echo "📁 Files in data directory:"
@@ -105,16 +115,23 @@ jobs:
           # Get shop count for commit message
           SHOPS_COUNT=$(cat data/latest.json | python -c "import sys, json; print(json.load(sys.stdin)['totalShops'])" 2>/dev/null || echo "unknown")
           
-          # Commit and push the changes
-          git commit -m "🤖 Update shop data - $(date -u +"%Y-%m-%d %H:%M UTC")
+          # Only commit if there are staged changes
+          if [ -n "$(git diff --cached --name-only)" ]; then
+            echo "📤 Committing and pushing changes..."
+            git commit -m "🤖 Update shop data - $(date -u +"%Y-%m-%d %H:%M UTC")
 
-          📊 Shop count: ${SHOPS_COUNT}
-          🤖 Model: gemini-2.5-flash
-          🗺️  Coordinates: Google Maps geocoding
-          🔍 Auto-discovered PDFs from happy-kaimonoken.info"
-          
-          echo "📤 Pushing changes to repository..."
-          git push
+            📊 Shop count: ${SHOPS_COUNT}
+            🤖 Model: gemini-2.5-flash
+            🗺️  Coordinates: Google Maps geocoding
+            🔍 Auto-discovered PDFs from happy-kaimonoken.info"
+            
+            echo "📤 Pushing changes to repository..."
+            git push
+          else
+            echo "⚠️ No staged changes to commit (this might indicate an issue)"
+            echo "Files were created but git doesn't see them as changes"
+            exit 1
+          fi
         else
           echo "changed=false" >> $GITHUB_OUTPUT
           echo "📊 No processing needed - PDF URLs haven't changed"
