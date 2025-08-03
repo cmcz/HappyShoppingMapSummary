@@ -2,8 +2,8 @@ name: Process Happy Shopping PDFs
 
 on:
   schedule:
-    # Run daily at 6:00 AM JST (21:00 UTC previous day)
-    - cron: '0 21 * * *'  
+    # Run weekly on Mondays at 6:00 AM JST (21:00 UTC Sunday)
+    - cron: '0 21 * * 0'  
   workflow_dispatch:
     inputs:
       force_processing:
@@ -13,7 +13,11 @@ on:
         type: boolean
   push:
     branches: [ main ]
-    # Trigger on any push to main for testing and updates
+    paths:
+      - 'scripts/**'
+      - '.github/workflows/**'
+      - 'requirements.txt'
+    # Only trigger on code changes, not data updates
 
 jobs:
   discover-and-process:
@@ -56,7 +60,7 @@ jobs:
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
-        FORCE_PROCESSING: ${{ github.event.inputs.force_processing || 'true' }}
+        FORCE_PROCESSING: ${{ github.event.inputs.force_processing || 'false' }}
       run: |
         # Debug secret access first
         if [ -z "$GEMINI_API_KEY" ]; then
@@ -174,7 +178,7 @@ jobs:
           - Python script with web scraping for PDF discovery
           - Gemini 2.5 Flash for AI processing
           - Automatic change detection and processing
-          - Daily checks at 6:00 AM JST
+          - Weekly checks on Mondays at 6:00 AM JST
         draft: false
         prerelease: false
         
